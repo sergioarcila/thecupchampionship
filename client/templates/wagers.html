@@ -1,0 +1,77 @@
+<template name="wagers">
+    {{>nav title="Home"}}
+    <!--{{>nav title="Home" black=false back=true}}-->
+  <div class="page home">
+    
+    
+    <div class="content-scrollable">
+        
+      
+      <div class="bg-image home" style="height:25%;background:-webkit-linear-gradient(left, {{T1.color.[0]}},black,{{T2.color.[0]}});">
+        <h1 class="title-home">
+          <div class="banner">
+              <div class="stats">
+                  <table>
+                    <tr>
+                    <td class="aR ">{{getwagersummary.T1.bets}}</td><td class="aC "># Bets</td><td class="aL ">{{getwagersummary.T2.bets}}</td>
+                    </tr>
+                    <tr>
+                    <td class="aR ">${{getwagersummary.T1.overall}}</td><td class="aC ">Wagered</td><td class="aL ">${{getwagersummary.T1.bets}}</td>
+                    </tr>
+                      <tr>
+                    <td class="aR ">${{getwagersummary.T1.owed}}</td><td class="aC ">Owed</td><td class="aL ">${{getwagersummary.T2.owed}}</td>
+                    </tr>
+                    <tr>
+                    <td class="aR ">${{getwagersummary.T1.live}}</td><td class="aC ">Total Live</td><td class="aL ">${{getwagersummary.T2.live}}</td>
+                    </tr>
+                </table>
+                  
+                   <!--<center><select class="currentexhibition" id="currentexhibition">
+                              <option value="" >Choose Exhibition</option>
+                              {{#each getexhibitions}}
+                              <option value="{{_id}}" {{isExhibitionSelected _id}}>{{description}}, {{date}}</option>
+                              {{/each}}
+                        </select></center>-->
+            </div>
+          </div>
+        </h1>
+          
+      </div>
+      <h2 class="list-title intro">  
+          <div class="t1">{{T1.long}}</div><div class="t2">{{T2.long}}</div>
+          <div class="imgcontainer"><img src="img/flags/{{getcurrentevent}}/Main/MainCupLogo.png"/></div>
+      </h2>    
+
+            
+      <h2 class="list-title">
+          <a href="#" class="nav-item js-question"><span class="icon-question"></span></a> 
+          Wager Summary
+          <a href="#" class="nav-item js-share"><span class="icon-camera"></span></a> 
+      </h2>
+      <div class="list-subtitle">
+          Bets: {{getwagersummary.bets}} | Wagered ${{getwagersummary.overall}}<br>
+          Owed: ${{getwagersummary.owed}} | Owe: ${{getwagersummary.owe}}<br>
+          Live: ${{getwagersummary.live}} | Live Payout: ${{getwagersummary.livepay}}
+      </div>
+      <div class="list-activities">
+        {{#each getwagers}}
+          {{> wager}}
+          {{else}}
+            <center>No Wagers Yet...</center>
+        {{/each}}
+      </div>
+    
+      {{> linktab}}
+        
+      <h2 class="list-title">Is Your Game Cup Ready?</h2>
+      <div class="list-subtitle">{{cupinfo.[0].year}}</div>
+      <div class="list-recipes">
+       <!-- {{#each featuredRecipes}}
+          {{> recipeItem recipe=this size='small'}}
+        {{/each}}-->
+      </div>
+      
+    </div>
+
+  </div>
+</template>

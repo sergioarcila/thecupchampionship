@@ -1,0 +1,55 @@
+<template name="broadcasts">
+   <a href="" class="item-activity js-match">
+      <span class="attribution">
+      <span class="meta">
+        <span class="author">
+            <i class="flag flag-16 flag-{{gT1.code}}"></i>
+            {{parseteamname data.T1}}
+            <span class="recipe">
+                {{#if compare 1 info.hole}}
+                    INTERVIEW
+                {{else}}
+                    {{#if compare info.hole 18}}
+                        POST-ROUND
+                    {{else}}
+                        Day {{data.day}}, Hole {{info.hole}}, {{formatdate info.date 'LT'}}
+                    {{/if}}
+                {{/if}}
+                
+                
+            </span>
+        </span>
+          {{#unless info.member.iteam}} 
+            {{#if compare 1 info.hole}}
+            {{else}}
+                {{#if compare info.hole 18}}
+                {{else}}
+                    {{info.club}}, {{getcardinal info.shot}} Shot
+                {{/if}}
+            {{/if}}
+          
+          {{/unless}}
+          <br>
+        <span class="author">
+            <i class="flag flag-16 flag-{{gT2.code}}"></i>
+            {{parseteamname data.T2}}
+            <span class="recipe">
+                {{#with getmatchsnapshot info.hole data.matchID}}
+                <i class="flag flag-16 flag-{{gT1.code}}"></i> {{event_status.[0]}}  <i class="flag flag-16 flag-{{gT2.code}}"></i> {{event_status.[1]}}
+                {{/with}}
+            </span> 
+        </span> 
+          {{#if info.member.iteam}} 
+              {{#if compare 1 info.hole}}
+                {{else}}
+                    {{#if compare info.hole 18}}
+                    {{else}}
+                        {{info.club}}, {{getcardinal info.shot}} Shot
+                    {{/if}}
+                {{/if}}
+          {{/if}}
+      </span>
+    </span>
+  </a>
+    
+</template>

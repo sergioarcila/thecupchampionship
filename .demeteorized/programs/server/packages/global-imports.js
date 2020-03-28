@@ -1,0 +1,41 @@
+/* Imports for global scope */
+
+Email = Package.email.Email;
+EmailInternals = Package.email.EmailInternals;
+HTTP = Package.http.HTTP;
+HTTPInternals = Package.http.HTTPInternals;
+ServiceConfiguration = Package['service-configuration'].ServiceConfiguration;
+OAuth1Binding = Package.oauth1.OAuth1Binding;
+LaunchScreen = Package['launch-screen'].LaunchScreen;
+Counts = Package['tmeasday:publish-counts'].Counts;
+publishCount = Package['tmeasday:publish-counts'].publishCount;
+RouteController = Package['iron:router'].RouteController;
+Route = Package['iron:router'].Route;
+Router = Package['iron:router'].Router;
+MeteorCamera = Package['mdg:camera'].MeteorCamera;
+MongoInternals = Package.mongo.MongoInternals;
+Mongo = Package.mongo.Mongo;
+Tracker = Package.tracker.Tracker;
+Deps = Package.tracker.Deps;
+Log = Package.logging.Log;
+Random = Package.random.Random;
+EJSON = Package.ejson.EJSON;
+Spacebars = Package.spacebars.Spacebars;
+check = Package.check.check;
+Match = Package.check.Match;
+Accounts = Package['accounts-base'].Accounts;
+Meteor = Package.meteor.Meteor;
+global = Package.meteor.global;
+meteorEnv = Package.meteor.meteorEnv;
+WebApp = Package.webapp.WebApp;
+main = Package.webapp.main;
+WebAppInternals = Package.webapp.WebAppInternals;
+_ = Package.underscore._;
+DDP = Package['ddp-client'].DDP;
+DDPServer = Package['ddp-server'].DDPServer;
+Blaze = Package.ui.Blaze;
+UI = Package.ui.UI;
+Handlebars = Package.ui.Handlebars;
+Autoupdate = Package.autoupdate.Autoupdate;
+HTML = Package.htmljs.HTML;
+

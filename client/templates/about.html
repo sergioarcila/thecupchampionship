@@ -1,0 +1,73 @@
+<template name="about">
+  
+{{#if Template.subscriptionsReady}}
+  <div class="page about">
+    {{> nav title='About' black=true}}
+
+    <div class="content-scrollable">
+        
+      <div class="bg-image about">
+        <h1 class="title-about">
+            <br><br>
+         Welcome to The Cup Pick 'Em. 
+        </h1>
+          
+      </div>
+        
+        
+      <div class="description-about">
+         Select three cup members from your own team to perform in 2017. He whose picks perform best (most points earned) wins. Entries close on Cup Friday when first ball is struck.
+    </div>
+        {{#if current}}    
+            {{#if picksopen}}
+            <div class="btn-secondary picksubmit">CHANGE PICKS</div>
+            {{else}}
+            <div class="btn-secondary picksubmit {{submittedClass}}">SUBMIT PICKS</div>
+            {{/if}}
+        
+              
+         <form>
+          {{#if picksopen}}
+            <br>
+            <div class="btn-primary"><center>YOUR PLAYERS</center></div>
+          {{/if}}     
+          {{#each getmembers}}
+          <div class="btn-primary player {{selectedClass}}" id="{{_id}}">
+              <span style="color:white">{{name}}<a href="{{this._id}}"><span class="icon-user" style="float:right; padding-right:1em;"></span></a>
+              </span>
+        <!--{{#if hasControl}}
+        <a class = "memberUP" value = "memberUP" id = "{{_id}}" style="font-size:2em">+&nbsp;</a>
+        <a class = "memberDN" value = "memberDN" id = "{{_id}}" style="font-size:2em">-</a>
+        {{/if}}-->
+          </div>
+          {{/each}}
+          </form>
+        <br>
+            <div class="btn-primary"><center>LEADERBOARD</center></div>
+            {{#each getentries}}
+            <div class="btn-primary">
+                {{#with getstats 'points'}}     
+              <span style="color:white">{{../name}}<br>
+                  <span class="sm">Picks shown after event begins...</span>
+                  <!--<span class="sm">{{lastname this.names.[0]}} ({{formatdecimal this.stats.[0] 0}}), {{lastname this.names.[1]}} ({{formatdecimal this.stats.[1] 0}}), {{lastname this.names.[2]}} ({{formatdecimal this.stats.[2] 0}})</span>-->
+                <span style="float:right; padding-right:1em;">({{addarray this.stats}})</span>
+              </span>
+                {{/with}}
+            </div>
+            {{else}}
+                <center>No one has entered yet...</center>
+                <br>
+          {{/each}}
+            <br>
+        {{>linktab}}
+        {{else}}
+            <div class="btn-primary"><center>LOGIN BELOW to play</center></div>
+            {{>linktab}}
+        {{/if}}
+    </div>
+    </div>
+    
+    {{else}}
+    {{> loader}}
+    {{/if}}
+</template>

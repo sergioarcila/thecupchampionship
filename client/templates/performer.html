@@ -1,0 +1,31 @@
+<template name="performer">
+  <a href="" class="item-activity js-match">
+    <span class="attribution" style="height:5em;">
+      <span class="meta">
+        <span class="author">
+            {{#with getplayerteam name}}
+                <i class="flag flag-16 flag-{{code}}"></i>{{../name}} (Impact: {{getstat ../name 'impact'}}, Pts: {{getstat ../name 'points'}}/{{getavailpoints ../name}})
+            {{/with}}
+        <ul>
+            <li>{{news.y2016.description}}</li>
+            <!--{{#each playerevent name}}
+            Drafted {{../draftPos2.y2016}}th in 2016.
+                <li>{{getmatchstatement matchID ../name}}</li>
+            {{/each}}-->
+        </ul>    
+        </span>
+        
+        <br><span style="float:right; text-align:right; width:100%;">{{#if hasmatchstarted matchID}}{{getmatchhole matchID}}{{else}}{{getteetime matchID 'time'}}{{/if}}</span>
+        <br>{{T2pts}}   
+        <!--<span class="avatar">
+        <img src="/img/flags/{{cupinfo.T2}}/{{cupinfo.T2}}_16x48.png">
+            {{cupinfo.T2}}
+        </span>-->
+        
+       <!--{{#if place}}<span class="location">&mdash;{{place}}</span>{{/if}}-->
+      </span>
+    </span>
+  </a>
+    
+    
+</template>

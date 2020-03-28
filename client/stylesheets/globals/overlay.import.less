@@ -1,0 +1,68 @@
+.overlay {
+  .overlay-back,
+  .overlay-dismiss {
+    .position(absolute, 0, auto, auto, auto, 2em, 2em);
+    text-align: center;
+    text-decoration: none;
+    z-index: 1;
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+      color: @color-medium-well;
+      font-size: 1em;
+      line-height: 48px;
+    }
+  }
+
+  .overlay-back { left: 0; }
+  .overlay-dismiss { right:0; }
+
+  .title-page {
+    .font-s2-alt;
+    .type-secondary;
+    .title-caps;
+    .ellipsized;
+    .position(absolute, 0, 0, auto, 0, auto, 1rem);
+    line-height: 3rem;
+    text-align: center;
+  }
+
+  .wrapper-heading {
+    .position(relative, 0%);
+    .transform(translate3d(0, 15%,0));
+    text-align: center;
+    padding: 0 1.25rem;
+      
+      select {
+    width:49%;
+    text-align:center;  
+    margin-top:0.5em;
+          
+    
+  .btn-secondary {
+    position:relative;
+      margin-top:2em;
+    width: 49%;
+  }
+          
+  }
+      
+  }
+
+  .title-overlay {
+    .font-l2;
+    .type-bold;
+    color: @color-full;
+    line-height: 1;
+    margin-bottom: .5rem;
+  }
+
+  .subtitle-overlay {
+    .font-m1;
+    line-height: 1.5;
+    color: @color-well;
+  }
+
+
+  
+}

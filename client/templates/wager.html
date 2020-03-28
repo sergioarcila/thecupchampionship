@@ -1,0 +1,59 @@
+<template name="wager">    
+    
+    
+    <a href="" class="item-activity">
+      <span class="attribution">
+      <span class="meta">
+        
+        <span class="author">
+            <span>{{name}}</span> 
+            <span class="recipe">
+                {{#if result.status}}
+                    LIVE BET
+                    {{else}}
+                        {{#if result.payout}}
+                            PAYS ${{formatdecimal info.payout 2}}
+                        {{else}}
+                            OWES ${{formatdecimal info.amount 2}}
+                        {{/if}}
+                 {{/if}}
+            </span>
+        </span>
+        <br><span class="matchholetext">
+            <span style="float:left">
+            </span>
+                Bet Type: {{info.type}}, 
+                ${{info.amount}} bet pays ${{formatdecimal info.payout 2}}<br>
+                {{#each matchID}}
+                    {{getmatchstatus2 this ../info.pick @index}}<br>
+                {{/each}}
+            </span>
+        <br> 
+        <span class="author">
+                {{#each getmatch matchID}}#{{matchID}}
+                {{#if compare2 ../info.pick @index}} 
+                    {{#each T1}} {{lastname this}} {{/each}} over
+                    {{#each T2}} {{lastname this}} {{/each}}
+                    ({{T1odds}})
+                {{else}}
+                    {{#each T2}} {{lastname this}} {{/each}} over
+                    {{#each T1}} {{lastname this}} {{/each}}
+                    ({{T2odds}})
+                {{/if}} 
+                {{/each}} 
+            <span class="recipe">
+                {{#if info.confirmed}}
+                <div class="done">CONFIRMED</div>
+                {{else}}
+                <div id="confirm" class="confirm">CONFIRM</div>
+                {{/if}}</span> 
+        </span> 
+       <!--{{#if place}}<span class="location">&mdash;{{place}}</span>{{/if}}-->
+      </span>
+    </span>
+  </a>
+
+   
+    
+    
+</template>

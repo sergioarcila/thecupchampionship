@@ -1,0 +1,264 @@
+<template name="match">
+
+  <div class="page recipe {{activeTabClass}}">
+    {{#nav title='Recipe' black=true back=true}}
+      {{#if bookmarked}}
+        <a href="#" class="nav-item js-remove-bookmark bookmarked"><span class="icon-bookmark"></span></a>
+      {{else}}
+        <a href="#" class="nav-item js-add-bookmark"><span class="icon-bookmark-hollow"></span></a>
+      {{/if}}
+        <a href="#" class="nav-item js-share"><span class="icon-camera"></span></a>
+    {{/nav}}
+
+    <!--<div class="image-recipe" style="background-image: url('{{recipeImage recipe=this size='full'}}')"></div>-->
+    {{#each getcurrentteam _id}}
+    <div class="image-recipe" style="background-image: url('/img/flags/{{description}}_320x350.jpg')"></div>
+    {{else}}
+    <div class="image-recipe" style="background-image: url('/img/flags/CUP_320x350.jpg')"></div>  
+    {{/each}}
+    <div class="attribution-recipe js-uncollapse">
+      
+      <h1 class="title-recipe">{{name}}</h1>
+       
+      {{#each gettwitter twitter}}
+      <!--<img src='{{services.twitter.profile_image_url_https}}'>-->
+      <img src='{{services.twitter.profile_image_url_https}}'>
+        {{else}}
+       <img src='/img/app/cuplogo.jpg'> 
+      {{/each}}
+      <div class="playerstats">
+      <table>
+          <tr><td>Tenure</td><td>PTS</td><td>Draft</td><td>S%</td><td>BB%</td><td>SH%</td><td>W%</td><td>IM</td><td>P</td></tr>
+          <tr><td>{{stats.tenure}}</td>
+              <td>{{stats.points}}</td>
+              <td>{{formatdecimal stats.draftperc 0}}</td>
+              <td>{{formatdecimal stats.singlesperc 0}}</td>
+              <td>{{formatdecimal stats.bestballperc 0}}</td>
+              <td>{{formatdecimal stats.shambleperc 0}}</td>
+              <td>{{formatdecimal stats.winperc 0}}</td>
+              <td>{{formatdecimal stats.impact 0}}</td>
+              <td>{{formatdecimal stats.power 0}}</td>
+          </tr>
+      </table>
+      </div>
+        
+      <div class="btns-group">
+        <a class="btn-secondary {{#if isActiveTab 'make'}}active{{/if}} {{#if isActiveTab 'recipe'}}no-state{{/if}} js-show-recipe">Summary</a>
+        <a class="btn-secondary {{#if isActiveTab 'feed'}}active{{/if}} {{#if isActiveTab 'recipe'}}no-state{{/if}} js-show-feed">Matches</a>
+      </div>
+    </div>
+
+
+    <div class="content-scrollable static-nav make-scrollable">
+      <h2 class="list-title" style="font-size:0.5em"><table><tr><td>YR.</td>
+                                               <td>TEAM</td>
+                                               <td></td>
+                                               <td></td>
+                                               <td>Drf%</td>
+                                               <td>Pts</td>
+                                               <td>IMPCT</td>
+                                               <td>TBD</td>
+                                               <td>TBD</td>
+                                           </tr></table>
+      </h2>
+      <ul class="list-ingredients">
+        
+        <li class="item-ingredient"><table><tr><td>2016</td>
+                                               {{#each getplayerteam name 2016}}
+                                               <td> {{description}}</td>
+                                               <td> {{winner}}</td>
+                                               <td> {{description}}</td>{{else}}<td></td><td></td><td></td>
+                                               {{/each}}
+                                               <td>{{formatdecimal draftperc.y2016 0}}</td>
+                                               <td>{{formatdecimal points.y2016 0}}</td>
+                                               <td>{{formatdecimal impacts.y2016 0}}</td>
+                                               <td>{{formatdecimal impacts.y2016 0}}</td>
+                                               <td>{{formatdecimal impacts.y2016 0}}</td>
+                                           </tr></table>
+        </li>
+        <li class="item-ingredient"><table><tr><td>2015</td>
+                                               {{#each getplayerteam name 2015}}
+                                               <td> {{description}}</td>
+                                               <td> {{winner}}</td>
+                                               <td> {{description}}</td>{{else}}<td></td><td></td><td></td>
+                                               {{/each}}
+                                               <td>{{formatdecimal draftperc.y2015 0}}</td>
+                                               <td>{{formatdecimal points.y2015 0}}</td>
+                                               <td>{{formatdecimal impacts.y2015 0}}</td>
+                                               <td>{{formatdecimal impacts.y2015 0}}</td>
+                                               <td>{{formatdecimal impacts.y2015 0}}</td>
+                                           </tr></table>
+        </li>
+        <li class="item-ingredient"><table><tr><td>2014</td>
+                                               {{#each getplayerteam name 2014}}
+                                               <td> {{description}}</td>
+                                               <td> {{winner}}</td>
+                                               <td> {{description}}</td>{{else}}<td></td><td></td><td></td>
+                                               {{/each}}
+                                               <td>{{formatdecimal draftperc.y2014 0}}</td>
+                                               <td>{{formatdecimal points.y2014 0}}</td>
+                                               <td>{{formatdecimal impacts.y2014 0}}</td>
+                                               <td>{{formatdecimal impacts.y2014 0}}</td>
+                                               <td>{{formatdecimal impacts.y2014 0}}</td>
+                                           </tr></table>
+        </li>
+        <li class="item-ingredient"><table><tr><td>2013</td>
+                                               {{#each getplayerteam name 2013}}
+                                               <td> {{description}}</td>
+                                               <td> {{winner}}</td>
+                                               <td> {{description}}</td>{{else}}<td></td><td></td><td></td>
+                                               {{/each}}
+                                               <td>{{formatdecimal draftperc.y2013 0}}</td>
+                                               <td>{{formatdecimal points.y2013 0}}</td>
+                                               <td>{{formatdecimal impacts.y2013 0}}</td>
+                                               <td>{{formatdecimal impacts.y2013 0}}</td>
+                                               <td>{{formatdecimal impacts.y2013 0}}</td>
+                                           </tr></table>
+        </li>
+        <li class="item-ingredient"><table><tr><td>2012</td>
+                                               {{#each getplayerteam name 2012}}
+                                               <td> {{description}}</td>
+                                               <td> {{winner}}</td>
+                                               <td> {{description}}</td>{{else}}<td></td><td></td><td></td>
+                                               {{/each}}
+                                               <td>{{formatdecimal draftperc.y2012 0}}</td>
+                                               <td>{{formatdecimal points.y2012 0}}</td>
+                                               <td>{{formatdecimal impacts.y2012 0}}</td>
+                                               <td>{{formatdecimal impacts.y2012 0}}</td>
+                                               <td>{{formatdecimal impacts.y2012 0}}</td>
+                                           </tr></table>
+        </li>
+        <li class="item-ingredient"><table><tr><td>2011</td>
+                                               {{#each getplayerteam name 2011}}
+                                               <td> {{description}}</td>
+                                               <td> {{winner}}</td>
+                                               <td> {{description}}</td>{{else}}<td></td><td></td><td></td>
+                                               {{/each}}
+                                               <td>{{formatdecimal draftperc.y2011 0}}</td>
+                                               <td>{{formatdecimal points.y2011 0}}</td>
+                                               <td>{{formatdecimal impacts.y2011 0}}</td>
+                                               <td>{{formatdecimal impacts.y2011 0}}</td>
+                                               <td>{{formatdecimal impacts.y2011 0}}</td>
+                                           </tr></table>
+        </li>
+        <li class="item-ingredient"><table><tr><td>2010</td>
+                                               {{#each getplayerteam name 2010}}
+                                               <td> {{description}}</td>
+                                               <td> {{winner}}</td>
+                                               <td> {{description}}</td>{{else}}<td></td><td></td><td></td>
+                                               {{/each}}
+                                               <td>{{formatdecimal draftperc.y2010 0}}</td>
+                                               <td>{{formatdecimal points.y2010 0}}</td>
+                                               <td>{{formatdecimal impacts.y2010 0}}</td>
+                                               <td>{{formatdecimal impacts.y2010 0}}</td>
+                                               <td>{{formatdecimal impacts.y2010 0}}</td>
+                                           </tr></table>
+        </li>
+        <li class="item-ingredient"><table><tr><td>2009</td>
+                                               {{#each getplayerteam name 2009}}
+                                               <td> {{description}}</td>
+                                               <td> {{winner}}</td>
+                                               <td> {{description}}</td>{{else}}<td></td><td></td><td></td>
+                                               {{/each}}
+                                               <td>{{formatdecimal draftperc.y2009 0}}</td>
+                                               <td>{{formatdecimal points.y2009 0}}</td>
+                                               <td>{{formatdecimal impacts.y2009 0}}</td>
+                                               <td>{{formatdecimal impacts.y2009 0}}</td>
+                                               <td>{{formatdecimal impacts.y2009 0}}</td>
+                                           </tr></table>
+        </li>
+        <li class="item-ingredient"><table><tr><td>2008</td>
+                                               {{#each getplayerteam name 2008}}
+                                               <td> {{description}}</td>
+                                               <td> {{winner}}</td>
+                                               <td> {{description}}</td>{{else}}<td></td><td></td><td></td>
+                                               {{/each}}
+                                               <td>{{formatdecimal draftperc.y2008 0}}</td>
+                                               <td>{{formatdecimal points.y2008 0}}</td>
+                                               <td>{{formatdecimal impacts.y2008 0}}</td>
+                                               <td>{{formatdecimal impacts.y2008 0}}</td>
+                                               <td>{{formatdecimal impacts.y2008 0}}</td>
+                                           </tr></table>
+        </li>
+        <li class="item-ingredient"><table><tr><td>2007</td>
+                                               {{#each getplayerteam name 2007}}
+                                               <td> {{description}}</td>
+                                               <td> {{winner}}</td>
+                                               <td> {{description}}</td>{{else}}<td></td><td></td><td></td>
+                                               {{/each}}
+                                               <td>{{formatdecimal draftperc.y2007 0}}</td>
+                                               <td>{{formatdecimal points.y2007 0}}</td>
+                                               <td>{{formatdecimal impacts.y2007 0}}</td>
+                                               <td>{{formatdecimal impacts.y2007 0}}</td>
+                                               <td>{{formatdecimal impacts.y2007 0}}</td>
+                                           </tr></table>
+        </li>
+        
+        
+        
+          
+          
+        
+      
+      </ul>
+
+      <!--<h2 class="list-title">Directions</h2>
+      <ol class="list-directions">
+        <li class="item-direction"><span class="text">2016 {{draftPos2.y2016}}</span></li>
+        <li class="item-direction">2015 {{draftPos2.y2015}}</li>
+        <li class="item-direction">2014 {{draftPos2.y2014}}</li>
+        <li class="item-direction">2013 {{draftPos2.y2013}}</li>
+        <li class="item-direction">2012 {{draftPos2.y2013}}</li>
+        <li class="item-direction">2011 {{draftPos2.y2013}}</li>
+        <li class="item-direction">2010 {{draftPos2.y2013}}</li>
+          
+      </ol>-->
+      <a href="{{source.url}}" target="_blank" class="btn-primary js-open">LIVE SCORING</a>
+      <a href="{{source.url}}" target="_blank" class="btn-primary js-open">'16 DRAFT</a>
+      <a href="{{source.url}}" target="_blank" class="btn-primary js-open">PICK EM</a>
+    </div>
+
+    <div class="content-scrollable static-nav feed-scrollable">
+      <!--<a class="btn-tertiary js-share"><span class="icon-camera"></span> Share that you made this</a>-->
+      <div class="list-ingredients">
+          <h2 class="list-title" style="font-size:0.5em"><table>
+                                            <tr>
+                                                <td style="width:3%">YR.</td>
+                                               <td style="width:40%">T1</td>
+                                               <td></td>
+                                               <td style="width:40%">T2</td>
+                                               <td></td>
+                                               <td>Pts</td>
+                                               <td>IMPCT</td>
+                                               <td>TBD</td>
+                                               <td>TBD</td>
+                                           </tr></table>
+      </h2>
+      <ul class="list-ingredients">
+        
+        <li class="item-ingredient"><table style="text-align:center">{{#each getmatchesplayer name}}
+                                              <tr style="border-bottom:1px solid black">
+                                               <td style="width:3%">'{{idx2year matchID 1}}</td>
+                                               <td style="width:40%">{{firstinitiallastname P11}}<br>{{firstinitiallastname P12}}</td>
+                                               <td tsyle="width:1%">def</td>
+                                               <td style="width:40%">{{firstinitiallastname P21}}<br>{{firstinitiallastname P22}}</td>
+                                               <td>{{status}}</td>
+                                               <td>{{type}}</td>
+                                               <td>{{firstinitiallastname P21}}</td>
+                                               <td>{{firstinitiallastname P22}}</td>
+                                               <td>{{T2pts}}</td>
+                                           </tr>
+                                           {{/each}}
+            </table>
+        </li>
+     </ul>
+          
+          <!--<div class="wrapper-message">
+            <div class="title-message">No feed activity yet</div>
+            <div class="subtitle-message">Be the first to share that you made this recipe. <a class="js-share">Share now</a></div>
+      </div>-->
+    </div>
+      </div>
+      
+  </div>
+</template>

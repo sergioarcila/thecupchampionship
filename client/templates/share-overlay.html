@@ -1,0 +1,118 @@
+<template name="shareOverlay">
+    <div class="overlay share">
+        <a href="#" class="js-close-overlay overlay-dismiss">
+            <span class="icon-cross"></span>
+        </a>     
+
+ 
+        <table class="shareinfo">
+            <tr></tr>
+            <tr>
+            <td colspan=14>
+                
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    {{#each getmatchmedia matchID}}
+                        <div class="swiper-slide">
+                        
+                            <div class="swiper-slide videowrapper">
+                                <!--<div class="videowrapper imgwrapper"><img src="/img/app/videoplay.png">
+                                </div>-->
+                                <video class="video-js vjs-default-skin" preload="metadata" poster="">
+                                    <source src="{{result.url}}" type='video/mp4' />
+                                </video> 
+                                 
+                            </div>
+                            <div class="swiper-slide descwrapper">
+                                {{#if compare data.matchID 0}}
+                                {{#if info.member.isteam}}
+                                    {{#unless info.member.iteam}}
+                                        {{#if info.member.iM}}{{data.T1.[1]}} with {{data.T1.[0]}}
+                                        {{else}}       {{data.T1.[0]}} with {{data.T1.[1]}}{{/if}}<br>
+                                        v. {{data.T2.[0]}} and {{data.T2.[1]}}<br>
+                                    {{else}}
+                                        {{#if info.member.iM}}{{data.T2.[1]}} with {{data.T2.[0]}}
+                                        {{else}}       {{data.T2.[0]}} with {{data.T2.[1]}}{{/if}}<br>
+                                        v. {{data.T1.[0]}} and {{data.T1.[1]}}<br>
+                                    {{/unless}}
+                                {{else}}
+                                    {{info.member}}<br>
+                                    v. {{info.opponent}}<br>
+                                {{/if}}
+                                {{else}}
+                                    {{data.T1}}<br>
+                                {{/if}}
+                                                 HOLE {{add info.hole 1}}<br>
+                                                 {{info.club}}<br>
+                                <br> Uploaded by: {{#if info.user}}{{info.user.profile.name}} {{else}} Anonymous {{/if}}
+                                 
+                            </div>
+                                 
+                        
+                        </div>
+                    {{else}}
+                        No media uploaded for this match, yet.
+                    {{/each}}
+                 </div>    
+                    <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+               
+            </div>  
+            </td>
+            </tr>
+            <tr>
+                <td colspan=14></td>
+            </tr>
+            <tr>
+                <td colspan=4>{{getholestring}}</td>
+                <td colspan=9><div id="holeslider"></div></td>
+                <td></td>
+            </tr>
+            <tr class = "{{#if shouldhideslider}} hideslider {{/if}}" >
+                <td colspan=4>{{getcardinal getshotslider.shot}} SHOT</td>
+                <td colspan=9><div id="shotslider"></div></td>
+                <td></td>
+            </tr>
+            <tr class = "{{#if shouldhideslider}} hideslider {{/if}}">
+                <td colspan=4>{{getshotslider.club}}</td>
+                <td colspan=9><div id="clubslider"></div></td>
+                <td></td>
+            </tr>
+            <tr><td colspan=4>MEMBER: </td>
+                <td colspan=9>
+                    <select class ="memberlist">
+                        {{#each T1}}
+                        <option value={{this}}>{{this}}</option>
+                        {{/each}}
+                        {{#each T2}}
+                        <option value={{this}}>{{this}}</option>
+                        {{/each}}
+                    </select>
+                </td>
+                <td></td>
+            </tr>
+            <tr><td colspan=14>CONTEXT | COMMENTARY | KEEP YOUR PHONE VERTICAL | PUTTS WORK TOO </td>
+                <!--<td colspan=4><input type="button" value="Upload" class="filepicker" /></td>-->
+            </tr>
+            <tr><td colspan=14><input type="file" class="file_bag"></td>
+                <!--<td colspan=4><input type="button" value="Upload" class="filepicker" /></td>-->
+            </tr>
+            <tr>
+                <td colspan=8><button class="btn-secondary upload">UPLOAD</button></td>
+                <td colspan=6>
+                                {{#each files}}
+                    <p>{{percent_uploaded}}</p>
+                {{/each}}
+                </td>
+            </tr>
+            
+        </table>
+        
+        
+    </div>
+</template>

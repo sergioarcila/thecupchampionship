@@ -1,0 +1,37 @@
+<template name="analysis">
+    
+    <div class="page whats-cooking">
+
+    {{>nav title="What's Cooking"}}
+      
+    <div class="content-scrollable">
+        
+    <br><br><br>
+    <h2 class="list-title">
+          Saturday Matches     
+    </h2>
+    <div class="btns-group">
+        {{#with getsession 'analysistype'}}
+        <a class="btn-secondary refreshchart {{#if isequal this 'proj'}}active{{/if}}" id="event_proj">Projected</a>
+        <a class="btn-secondary refreshchart {{#if isequal this 'status'}}active{{/if}}" id="event_status">Earned</a>
+        {{/with}}
+    </div>    
+        {{#if hasStarted}}    
+            <div class="wrapper-chart"><canvas id="myChart" ></canvas></div>
+        {{else}}
+        <div class="wrapper-chart">
+            The {{getsession 'selectedYear'}} Cup hasn't started yet.
+        </div>
+        {{/if}}
+        
+     <h2 class="list-title">
+          Friday Matches     
+    </h2>
+    <div class="wrapper-chart"><canvas id="myChart2" ></canvas></div>  
+    
+    <!--<div class="wrapper-chart"><div id="chart">{{createChart}}</div></div>-->
+    
+        
+    </div>
+    </div>
+</template>

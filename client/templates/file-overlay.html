@@ -1,0 +1,335 @@
+<template name="fileOverlay">
+    {{#if Template.subscriptionsReady}}
+    <div class="overlay share">
+        
+        <a href="#" class="js-close-overlay overlay-dismiss">
+            <span class="icon-cross"></span>
+        </a>
+        
+    {{#unless isequal data.type 'stroke'}}
+    <div class='videowrapper'>
+        <div class='transitionscreen' id='transitionscreen'>
+            
+            <div class="transition" id="transition">
+                <!--<div class="transition t">
+                    <div class="t t0">1UP</div>
+                    <div class="t t1">Player 1 + Player 2</div>
+                    <div class="t t2">17</div>
+                    <div class="t t3">Player 1 + Player 2</div>
+                    <div class="t t4">2DN</div>
+                </div>-->
+                <div class="transition header">
+                    <div class="iC"><img src="/img/flags/thecup/Main/MainCupLogo.png"></div>
+                    <span class="transition header tx1" >{{eventinfo.formal}}</span>
+                    <span class="transition header tx2" ><br>{{getsession 'selectedYear'}}</span>
+                </div>
+                {{#each getleaderboard}}
+                    {{#with getleaderboardmatch}}
+                   <div class="transition t">
+                                <div class="t t0 s">{{#if compare ../match_status 0}} {{abs ../match_status}} UP{{/if}}</div>
+                                <div class="t t1 s">
+                                    {{#if isteammatch matchID}}
+                                        <span class="small">
+                                            {{firstinitiallastname this.T1.[0]}}/{{firstinitiallastname this.T1.[1]}}
+                                        </span>
+                                    {{else}}{{firstinitiallastname this.T1.[0]}}
+                                    {{/if}}
+                                    {{#if compare ../match_status 0}} <i class="flag flag-24 flag-{{T1.code}}"></i>{{/if}}
+                                </div>
+                       
+                       <div class="t t2">{{getmatchhole ../match_hole ../match_status}}</div>
+                       <div class="t t3 s">{{#if compare 0 ../match_status}}<i class="flag flag-24 flag-{{T2.code}}"></i>{{/if}}
+                        {{#if isteammatch matchID}} 
+                           <span class="small">{{firstinitiallastname this.T2.[0]}}/{{firstinitiallastname this.T2.[1]}}
+                           </span> 
+                        {{else}}{{firstinitiallastname this.T2.[0]}}
+                           {{/if}}
+                       </div>
+                       <div class="t t4 s">{{#if compare 0 ../match_status}}{{abs ../match_status}} UP{{/if}}</div>         
+                   </div>
+                   {{/with}}
+                {{else}}
+                    <div class="transition t"></div>
+                {{/each}}
+                <!--<div class="transition footer"></div>-->
+            </div>
+              
+            
+        </div>
+        {{#if this.result.url}}
+        <video id="example_video_1"  class="video-js vjs-default-skin"
+                            preload="metadata" autoplay="false"
+                            poster="" webkit-playsinline="true" playsinline="true">
+    
+            <source src="{{this.result.url}}" type='video/mp4'/>
+        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that 
+        <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+        </video>
+        {{else}}
+            <br>
+        <br>
+            <div class="transition header">
+                    <div class="iC"><img src="/img/flags/thecup/Main/MainCupLogo.png"></div>
+                    <span class="transition header tx1" >{{eventinfo.formal}}, {{getsession 'selectedYear'}}</span>
+                    <span class="transition header tx2" ><br></span>
+            </div>
+            <br><br>
+        <center>No broadcasts have been uploaded, yet...<br> Upload a video of a shot from a match in its scorekeeping panel.</center>
+        {{/if}}
+        <audio controls id="transitionaudio">
+              <source src="/audio/transition_gobettipizzini.mp3" type="audio/mpeg" controls preload="metadata" autoplay="true" volume=0.1
+                            poster="" webkit-playsinline="true" playsinline="true">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+        
+    {{else}}
+    
+        <div class='videowrapper'>
+        <div class='transitionscreen' id='transitionscreen'>
+            
+            <div class="transition" id="transition">
+                <!--<div class="transition t">
+                    <div class="t t0">1UP</div>
+                    <div class="t t1">Player 1 + Player 2</div>
+                    <div class="t t2">17</div>
+                    <div class="t t3">Player 1 + Player 2</div>
+                    <div class="t t4">2DN</div>
+                </div>-->
+                <div class="stransition header">
+                    <div class="iC"><img src="/img/flags/thecup/Main/MainCupLogo.png"></div>
+                    <span class="transition header tx1" >{{eventinfo.formal}}, {{getsession 'selectedYear'}}</span>
+                    <span class="transition header tx2" ><br>{{exhibitioninfo.description}}</span>
+                </div>
+                
+                <div class="stransition ts">
+                    <div class="ts ts0"></div>
+                    <div class="ts ts1">Member</div>
+                    <div class="ts ts2">H</div>
+                    <div class="ts ts3">N</div>
+                    <div class="ts ts4">G</div>
+                    <div class="ts ts5"></div>
+                </div>
+                
+                {{#each getleaderboard}}
+                    {{#with getleaderboardmatch}}
+                   <div class="transition ts">
+                       <div class="ts ts0">
+                           {{#with getplayerteam this.T1.[0]}}
+                            <i class="flag flag-24 flag-{{code}}"></i>
+                           {{/with}}
+                       </div>
+                       <div class="ts ts1">{{firstinitiallastname this.T1.[0]}}
+                       {{#if isteammatch matchID}}/{{firstinitiallastname this.T1.[1]}}{{/if}}
+                       </div>
+                       
+                       <div class="ts ts2">
+                           {{#if isequal ../match_hole 18}}
+                                F
+                           {{else}}
+                                {{../match_hole}}
+                           {{/if}}
+                       </div>
+                       <div class="ts ts3">
+                           {{#if ../match_netstatus}}
+                                {{getNumber ../match_netstatus}}
+                           {{else}}
+                                E
+                           {{/if}}  
+                       </div>
+                       <div class="ts ts4">
+                            {{#if ../match_status}}
+                                {{getNumber ../match_status}}
+                           {{else}}
+                                E
+                           {{/if}}  
+                       </div>
+                       <div class="ts ts5"></div>
+                   </div>
+                    {{/with}}
+                {{/each}}
+                <!--<div class="transition footer"></div>-->
+            </div>
+                
+            
+        </div>
+        {{#if this.result.url}}
+        <video id="example_video_1"  class="video-js vjs-default-skin"
+                            preload="metadata" autoplay="true"
+                            poster="" webkit-playsinline="true" playsinline="true">
+    
+            <source src="{{this.result.url}}" type='video/mp4'/>
+        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that 
+        <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+        </video>
+        {{else}}
+            <br>
+        <br>
+            <div class="transition header">
+                    <div class="iC"><img src="/img/flags/thecup/Main/MainCupLogo.png"></div>
+                    <span class="transition header tx1" >{{eventinfo.formal}}, {{getsession 'selectedYear'}}</span>
+                    <span class="transition header tx2" ><br></span>
+            </div>
+            <br><br>
+        <center>No broadcasts have been uploaded, yet...<br> Upload a video of a shot from a match in its scorekeeping panel.</center>
+        {{/if}}
+        <audio controls id="transitionaudio">
+              <source src="/audio/transition_gobettipizzini.mp3" type="audio/mpeg" controls preload="metadata" autoplay="false"
+                            poster="" webkit-playsinline="true" playsinline="true">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+        
+        
+    {{/unless}}
+        
+    
+        {{#unless isequal data.type 'stroke'}}  
+        {{#if compare info.hole -1}}
+        {{#unless compare info.hole 18}}
+    <div class="box-set" id="matchscoring">
+        <div class="box box-1"></div>
+        <div class="box box-2" style = "background:linear-gradient(to right, rgba(24,64,56,0.9), {{#if info.member.iteam}}{{T2.color.[0]}},{{T2.color.[0]}}{{else}}{{T1.color.[0]}},{{T1.color.[0]}}{{/if}})">
+            <span class="pName">
+                {{#if info.member.isteam}}
+                                {{#unless info.member.iteam}}
+                                    <i class="flag flag-16 flag-{{T1.code}}"></i>{{#if info.member.iM}}{{lastname data.T1.[1]}} <span class="small">{{lastname data.T1.[0]}}</span> {{else}} {{lastname data.T1.[0]}} <span class="small">{{lastname data.T1.[1]}}</span> {{/if}}
+                                {{else}}
+                                    <i class="flag flag-16 flag-{{T2.code}}"></i>{{#if info.member.iM}}{{lastname data.T2.[1]}} <span class="small">{{lastname data.T2.[0]}}</span> {{else}} {{lastname data.T2.[0]}} <span class="small">{{lastname data.T2.[1]}}</span> {{/if}}
+                                {{/unless}}
+                {{else}}
+                    {{#if info.member.iteam}}
+                        <i class="flag flag-16 flag-{{T2.code}}"></i>{{lastname data.T2.[0]}}
+                    {{else}}
+                         <i class="flag flag-16 flag-{{T1.code}}"></i>{{lastname data.T1.[0]}}
+                    {{/if}}
+                {{/if}}
+                </span>
+        </div>     
+            
+        <div class="box box-3">
+          <div class="box box-3 box-31">{{getcardinal info.hole}}</div>
+          <div class="box box-3 box-32">{{getyardage info.hole}}y</div>
+          <div class="box box-3 box-33">
+                {{getcardinal info.shot}} Shot
+            </div>
+        </div>
+          <div class="box box-4" style="background-color:{{#if isin info.member data.T1}}{{T1.color.[0]}}{{else}}{{T2.color.[0]}}{{/if}}">    
+              
+            {{#with getmatchsnapshot info.hole data.matchID}}
+                  {{#if match_status}}
+                    {{abs match_status}}
+                        <span class="small">
+                        {{#if ../info.member.iteam}}
+                                {{#if compare 0 match_status}}
+                                UP
+                                {{else}}
+                                DN
+                                {{/if}}
+                        {{else}}
+                                {{#if compare 0 match_status}}
+                                DN
+                                {{else}}
+                                UP
+                                {{/if}}
+                        {{/if}}
+                        </span>
+                  {{else}}
+                    AS
+                  {{/if}}  
+            {{/with}}
+        </div>
+        <div class="box box-5"></div>
+        <div class="box box-6" style = "background:linear-gradient(to right, rgba(24,64,56,0.9), {{#if info.member.iteam}}{{T1.color.[0]}},{{T1.color.[0]}}{{else}}{{T2.color.[0]}},{{T2.color.[0]}}{{/if}})">
+                {{#if info.member.isteam}}
+                                {{#unless info.member.iteam}}
+                                    v {{#if info.member.iM}}{{lastname data.T2.[1]}} &amp; {{lastname data.T2.[0]}} {{else}} {{lastname data.T2.[0]}} &amp; {{lastname data.T2.[1]}}{{/if}}
+                                {{else}}
+                                    v {{#if info.member.iM}}{{lastname data.T1.[1]}} &amp; {{lastname data.T1.[0]}} {{else}} {{lastname data.T1.[0]}} &amp; {{lastname data.T1.[1]}}{{/if}}
+                                {{/unless}}
+                {{else}}
+                    {{#if info.member.iteam}}
+                        v {{lastname data.T1.[0]}}
+                    {{else}}
+                        v {{lastname data.T2.[0]}}
+                    {{/if}}
+                {{/if}}     
+        </div>
+    </div>
+        {{/unless}}
+        {{/if}}
+        
+        {{else}}
+        
+        <div class="box-set" id="matchscoring">
+        <div class="box box-1"></div>
+        <div class="box box-2" style = "background:linear-gradient(to right, rgba(24,64,56,0.9), {{#if info.member.iteam}}{{T2.color.[0]}},{{T2.color.[0]}}{{else}}{{T1.color.[0]}},{{T1.color.[0]}}{{/if}})">
+            <span class="pName">
+            {{#with getplayerteam data.T1.[0]}}     
+                <i class="flag flag-16 flag-{{code}}"></i> {{firstinitiallastname ../data.T1.[0]}}
+            {{/with}}
+            </span>    
+        </div>     
+            
+        <div class="box box-3">
+          <div class="box box-3 box-31">{{getcardinal info.hole}}</div>
+          <div class="box box-3 box-32">{{getyardage info.hole}}y</div>
+          <div class="box box-3 box-33">
+                {{getcardinal info.shot}} Shot
+            </div>
+        </div>
+          <div class="box box-4" style="background-color:{{#if isin info.member data.T1}}{{T1.color.[0]}}{{else}}{{T2.color.[0]}}{{/if}}">     {{#with getmatchsnapshot info.hole data.matchID}}
+                  {{#if match_netstatus}}
+                    {{getNumber match_netstatus}}
+                  {{else}}
+                    E
+                  {{/if}}  
+              {{/with}}
+        </div>
+        <div class="box box-5"></div>
+        <div class="box box-6" style = "background:linear-gradient(to right, rgba(24,64,56,0.9), {{#if info.member.iteam}}{{T1.color.[0]}},{{T1.color.[0]}}{{else}}{{T2.color.[0]}},{{T2.color.[0]}}{{/if}})">
+            <!--{{getleadphrase data.netstatus}}--> 
+            {{#unless isequal info.club 'PUTTER'}}
+                Club: {{info.club}}
+            {{else}}
+                {{getshotphrase info.shot info.hole}}
+            {{/unless}}
+        </div>
+    </div>
+        
+   {{/unless}}
+    
+       
+    {{#with gethistory data.matchID info.hole}}
+    <div class="bummary" id="bummary">
+        <div class="bummary1">
+        <span class="bet-1">
+            {{event_status.[1]}}
+            <i class="flag flag-24 flag-{{T2.code}}"></i>
+            <i class="flag flag-24 flag-{{T1.code}}"></i>
+            {{event_status.[0]}}
+        </span>
+        </div>
+        <div class="bummary2">
+        <span class="bet-2">
+            {{event_proj.[1]}} PROJECTED {{event_proj.[0]}}
+        </span>
+        </div>
+        <div class="bummary3">
+        <span class="bet-3">
+            Day {{../data.day}}, {{getviddate time}}
+        </span>
+        </div>
+    </div> 
+    {{/with}}
+        
+        
+    <div class="cuplogo" id="cuplogo">
+        <img src='img/flags/thecup/Main/logo_transparent.png'>
+    </div>    
+        
+    </div>
+    {{else}}
+        {{> loader}}
+    {{/if}}
+</template>

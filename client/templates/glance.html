@@ -1,0 +1,92 @@
+<template name="glance">
+    {{>nav title="glance" black=false back=false}}
+  <div class="page home">
+    <div class="content-scrollable">
+      <div class="header">
+      </div>
+        
+    
+         
+      <h2 class="list-title">
+          {{getsession 'selectedYear'}} SUMMARY
+      </h2>
+        <div class="list-subtitle">The Cup Championship</div>
+      <h2 class="list-title">
+          <a href="#" class="nav-item js-question"><span class="icon-question"></span></a> 
+          TOP PERFORMERS
+          <a href="#" class="nav-item js-share"><span class="icon-camera"></span></a>
+      </h2>
+      <div class="list-subtitle">Description of top performer</div>
+      <div class="list-activities">
+        {{#each topperformers}}
+          {{> performer}}
+          <!--<div class="wrapper-message">-->
+          <!--  <div class="title-message">No one is cooking yet!</div>-->
+          <!--  <div class="subtitle-message">Share that you made a recipe and it will show up here.</div>-->
+          <!--</div>-->
+        {{/each}}
+      </div>
+      <h2 class="list-title">
+          <a href="#" class="nav-item js-question"><span class="icon-question"></span></a> 
+          TOP CHOKERS
+          <a href="#" class="nav-item js-share"><span class="icon-camera"></span></a>
+      </h2>
+      <div class="list-subtitle">Description of choke</div>
+      <div class="list-activities">
+        {{#each worstperformers}}
+          {{> performer}}
+          <!--<div class="wrapper-message">-->
+          <!--  <div class="title-message">No one is cooking yet!</div>-->
+          <!--  <div class="subtitle-message">Share that you made a recipe and it will show up here.</div>-->
+          <!--</div>-->
+        {{/each}}
+      </div>
+      <h2 class="list-title">
+          <a href="#" class="nav-item js-question"><span class="icon-question"></span></a> 
+          PIVOTAL MATCHES
+          <a href="#" class="nav-item js-share"><span class="icon-camera"></span></a>
+      </h2>
+      <div class="list-subtitle">What makes it pivotal</div>
+      <div class="list-activities">
+        {{#each keymatches}}
+          {{> activity}}
+          <!--<div class="wrapper-message">-->
+          <!--  <div class="title-message">No one is cooking yet!</div>-->
+          <!--  <div class="subtitle-message">Share that you made a recipe and it will show up here.</div>-->
+          <!--</div>-->
+        {{/each}}
+      </div>
+       <h2 class="list-title">
+          RECENT TRENDS
+      </h2>
+        <div class="list-subtitle">The Cup Championship; 2014-2016</div>
+      <h2 class="list-title">
+          HOT
+      </h2>
+          <div class="list-subtitle"><br>Team Play<br>Over the past three years, Western Kentuckians are unstoppable in team matches on either day of The Cup.</div>
+          <div class="list-activities">
+            {{#each trendingplayers 'team'}}
+              {{> performer}}
+            {{/each}}
+          </div>
+          <div class="list-subtitle"><br>Singles</div>
+          <div class="list-activities">
+            {{#each trendingplayers 'singles'}}
+              {{> performer}}
+            {{/each}}
+          </div>
+      <h2 class="list-title">
+          PLUMMETING
+      </h2>    
+          <div class="list-subtitle">Talk is cheap.</div>
+          <div class="list-activities">
+            {{#each plummetingplayers}}
+              {{> performer}}
+            {{/each}}
+          </div>
+      {{> linktab}}
+      <h2 class="list-title">Is Your Game Cup Ready?</h2>
+    </div>
+
+  </div>
+</template>

@@ -1,0 +1,40 @@
+<template name="broadcastpreview">
+    {{>nav title="Home" black=false back=true}}
+    {{#if Template.subscriptionsReady}}
+  <div class="page home">
+    <div class="content-scrollable">
+            <h2 class="list-title"><br><br></h2>  
+        <h2 class="list-title">
+            {{getsession 'selectedYear'}} Cup Broadcast 
+      </h2>
+      <div class="list-subtitle">
+          Click on a shot to begin the broadcast
+          <br>Upload more in the scorekeeping panel
+      </div>
+      
+        
+      <div class="list-activities">
+        {{#each broadcast}}
+          {{> broadcasts}}
+        {{/each}}
+      </div>
+        
+        
+      {{> linktab}}
+      <h2 class="list-title">Is Your Game Cup Ready?</h2>
+      <h2 class="list-title printsummary">PRINT SUMMARY</h2>
+      <h2 class="list-title"><sm>The Cup Championship<br>All Rights Reserved, 2018</sm></h2>    
+      {{#if isGlobalAdmin}}
+        T1: <input type="text" id="T1"><br>
+        T2: <input type="text" id="T2"><br>
+        Match Type: <input type="text" id="type"><br>
+        Time Add: <input type="text" id="addT"><br>
+      <div class="btn-primary" id="newmatch">ADD MATCH</div>
+        {{/if}}    
+    </div>
+
+  </div>
+    {{else}}
+    {{> loader}}
+    {{/if}}
+</template>

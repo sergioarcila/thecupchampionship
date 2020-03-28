@@ -1,0 +1,62 @@
+<template name="recipeItem" head='false' back='black'>
+    {{#if head}}
+    <a class="item-recipe head">
+      <!--<img src={{getmemberimageURL this.twitter}} />-->
+      <span class="btn-tertiary" style="background:white;color:@color-raw">
+        <div class="title-main">&nbsp;</div>
+        <span class="metadata-recipe">
+        <span class="author-recipe">
+            <table style="font-size:0.8em;">
+            <tr>
+                <td class="tenure {{#if ischoice 'tenure'}}bold{{/if}}">Yrs</td>
+                    <td class="cupresult {{#if ischoice 'cupresult'}}bold{{/if}}">Cups</td>
+                    <td class="draftperc {{#if ischoice 'draftperc'}}bold{{/if}}">DFT%</td>
+                    <td class="power {{#if ischoice 'power'}}bold{{/if}}">PWR</td>
+                    <td class="impact {{#if ischoice 'impact'}}bold{{/if}}">IMP</td>
+                    <td class="points {{#if ischoice 'points'}}bold{{/if}}">PTS</td>
+                    <td class="winperc {{#if ischoice 'winperc'}}bold{{/if}}">W%</td>
+                    <td class="">TBD</td>
+            </tr>
+            </table>
+            <!--<span class="bookmarks-recipe">
+            test
+            <span class="icon-bookmark"></span>
+            </span>-->
+        </span>
+        </span>
+      </span>
+       
+    
+  </a>
+    {{else}}
+    <a class="item-recipe" href="{{this._id}}">
+      <!--<img src={{getmemberimageURL this.twitter}} />-->
+      <span class="btn-tertiary">
+        <div class="title-main"><i class="flag flag-16 flag-{{getplayerteam.code}}"></i>{{this.name}}</div>
+        <span class="metadata-recipe">
+        <span class="author-recipe">
+            <table>
+            <tr style = 'font-size:1.2em'>
+                <td>{{formatdecimal this.tenure 0}}</td>
+                <td>{{formatdecimal this.cupresult 0}}</td>
+                <td>{{formatdecimal this.draftperc 0}}</td>
+                <td>{{formatdecimal this.power 0}}</td>
+                <td>{{formatdecimal this.impact 0}}</td>
+                <td>{{formatdecimal this.points 1}}</td>
+                <td>{{multiply 100 this.winperc}}</td>
+                <td>TBD</td>
+            </tr>
+            </table>
+            <!--<span class="bookmarks-recipe">
+            test
+            <span class="icon-bookmark"></span>
+            </span>-->
+        </span>
+        </span>
+      </span>
+       
+    
+  </a>
+    {{/if}}
+
+</template>

@@ -1,0 +1,178 @@
+<template name="recipe">
+
+  <div class="page recipe {{activeTabClass}}">
+    <!--{{#nav title='Recipe' black=true back=true}}
+      {{#if bookmarked}}
+        <a href="#" class="nav-item js-remove-bookmark bookmarked"><span class="icon-bookmark"></span></a>
+      {{else}}
+        <a href="#" class="nav-item js-add-bookmark"><span class="icon-bookmark-hollow"></span></a>
+      {{/if}}
+        <a href="#" class="nav-item js-share"><span class="icon-camera"></span></a>
+    {{/nav}}-->
+    {{>nav title="Home" black=true back=true}}  
+
+    <!--<div class="image-recipe" style="background-image: url('{{recipeImage recipe=this size='full'}}')"></div>-->
+    <div class="attribution-recipe js-uncollapse" id="headbanner" style="background-color:{{currentteam.color.[0]}}; background-image:url('/img/flags/{{currentteam.event}}/{{currentteam.description}}/{{currentteam.description}}_320x350.jpg')">
+           
+      {{#each getpic _id}}
+      <!--<img src='{{formattwitter services.twitter.profile_image_url_https 0}}'>-->
+       <div id="avatar" style="background-image: url('{{result.url}}')"><input type="button" value="Change Image" class="showPicker" /></div>
+      {{else}}
+       <div id="avatar" style="background-image: url('/img/app/cuplogo.jpg')"><input type="button" value="Change Image" class="showPicker"/></div>
+      {{/each}}
+      <h1 class="title-recipe">{{name}}</h1>
+      <div class="playerstats">
+      <table>
+          <tr>
+              <td>Cup</td>
+              <td>Pts</td>
+              <td>Draft</td>
+              {{#each geteventformats}}
+                <td>{{this}}%</td>
+              {{/each}}
+              <td>W%</td>
+              <td>IMP</td>
+              <td>PWR</td>
+          </tr>
+          <tr><td>{{formatrecord stats.cuprecord}}</td>
+              <td>{{stats.points}}</td>
+              <td>{{formatdecimal stats.draftperc 0}}</td>
+              <td>{{formatdecimal stats.bestball.perc 0}}</td>
+              <td>{{formatdecimal stats.singles.perc 0}}</td>
+              <td>{{formatdecimal stats.shamble.perc 0}}</td>
+              <td>{{formatdecimal stats.winperc 0}}</td>
+              <td>{{formatdecimal stats.impact}}</td>
+              <td>{{formatdecimal stats.power 0}}</td>
+          </tr>
+      </table>
+      </div>
+        
+      <div class="btns-group">
+        <a class="btn-secondary {{#if isActiveTab 'make'}}active{{/if}} {{#if isActiveTab 'recipe'}}no-state{{/if}} js-show-recipe">Summary</a>
+        <a class="btn-secondary {{#if isActiveTab 'feed'}}active{{/if}} {{#if isActiveTab 'recipe'}}no-state{{/if}} js-show-feed">Matches</a>
+      </div>
+    </div>
+      
+    <div class="content-scrollable static-nav make-scrollable">
+      <h2 class="list-title" style="font-size:0.5em">
+          <table><tr><td style="width:5%"></td>
+                     <td style="width:18%"></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td colspan=3>***POINTS***</td>
+                     <td></td>
+                </tr>
+          </table>
+      </h2>
+      <h2 class="list-title" style="font-size:0.5em">
+          <table><tr><td style="width:5%">YR</td>
+                     <td style="width:18%">TEAM</td>
+                     <td>Drf%</td>
+                     <td>PWR</td>
+                     <td>IMP</td>
+                     <td>Singles</td>
+                     <td>BB</td>
+                     <td>Shamble</td>
+                     <td></td>
+                </tr>
+          </table>
+      </h2>    
+      <ul class="list-ingredients">
+        {{#each getcups}}
+            <li class="item-ingredient">
+                <table>
+                    <tr>
+                        <td style="width:5%">{{subtract year 2000}}</td>
+                        {{#each getplayerteam ../name year}}
+                        <td style="width:18%"> {{description}} {{#if isequal winner 1}}(W){{else}}
+                                                   {{#if isequal winner 0}}(L){{else}}{{/if}}
+                                                   {{/if}}
+                        </td>
+                        {{else}}<td style="width:18%"></td>
+                        {{/each}}
+                        <td>{{getplayerstat .. 'draft.perc' year}}</td>
+                        <td>{{getplayerstat .. 'power' year}}</td>
+                        <td>{{getplayerstat .. 'impact' year}}</td>
+                        <td>{{getplayerstat .. 'singles.points' year}}</td>
+                        <td>{{getplayerstat .. 'bestball.points' year}}</td>
+                        <td>{{getplayerstat .. 'shamble.points' year}}</td>
+                        <td></td>
+                   </tr>
+                </table>
+            </li>
+        {{/each}}
+      </ul>
+          
+        <div class="links">
+        {{> linktab}}
+      </div>
+        
+    </div>
+
+    <div class="content-scrollable static-nav feed-scrollable">
+      <!--<a class="btn-tertiary js-share"><span class="icon-camera"></span> Share that you made this</a>-->
+      <div class="list-ingredients">
+      <h2 class="list-title" style="font-size:0.5em">
+              <table>
+                                            <tr>
+                                               <td class="stat0">YR</td>
+                                               <td class="stat2">Team 1</td>
+                                               <td class="stat0"></td>
+                                               <td class="stat2">Team 2</td>
+                                               <td class="stat1">Result</td>
+                                               <td class="stat1">Pts</td>
+                                               <td class="stat1">Pwr</td>
+                                            </tr>
+              </table>
+      </h2>
+      <ul class="list-ingredients">
+        {{#each getmatchesplayer name}}
+        <a href="/" class="playermatch"><li class="item-ingredient">
+        <table>
+                            <tr>
+                                               <td class="stat0"><sm>{{#with idx2year matchID 0}}{{subtract this 2000}}{{/with}}</sm></td>
+                                               <td class="stat2"><sm>{{#if compare T1pts T2pts}}
+                                                                       {{firstinitiallastname T1.[0]}}
+                                                                             {{#if isteammatch matchID}}<br>{{firstinitiallastname T1.[1]}}{{/if}}
+                                                                     {{else}}
+                                                                       {{firstinitiallastname T2.[0]}}
+                                                                             {{#if isteammatch matchID}}<br>{{firstinitiallastname T2.[1]}}{{/if}}
+                                                                     {{/if}}
+                                               </sm>
+                                               </td>
+                                               <td class="stat0"><sm>{{#if status}}def{{else}}{{#if hole}}tie{{else}}vs.{{/if}}{{/if}}</sm></td>
+                                               <td class="stat2"><sm>{{#if compare T1pts T2pts}}
+                                                                       {{firstinitiallastname T2.[0]}}
+                                                                             {{#if isteammatch matchID}}<br>{{firstinitiallastname T2.[1]}}{{/if}}
+                                                                     {{else}}
+                                                                        {{firstinitiallastname T1.[0]}}
+                                                                             {{#if isteammatch matchID}}<br>{{firstinitiallastname T1.[1]}}{{/if}}
+                                                                     {{/if}}
+                                               </sm></td>
+                                               <td class="stat1"><sm>{{getmatchstatus matchID event}}</sm></td>
+                                               <td class="stat1"><sm>{{#if inarray T1 ../name}}{{T1pts}}{{else}}{{T2pts}}{{/if}} / {{add T1pts T2pts}}</sm></td>
+                                <td class="stat1"><sm>{{getplayerimpact ../name}}</sm></td>
+                            </tr>      
+            </table>
+        </li></a>
+        {{else}}  
+        <li class="item-ingredient">No matches played yet...</li>
+        {{/each}}
+     </ul>
+          
+          <!--<div class="wrapper-message">
+            <div class="title-message">No feed activity yet</div>
+            <div class="subtitle-message">Be the first to share that you made this recipe. <a class="js-share">Share now</a></div>
+      </div>-->
+    </div>
+        
+        <div class="links">
+        {{> linktab}}
+      </div>
+   </div>
+      
+      
+  </div>
+   
+</template>

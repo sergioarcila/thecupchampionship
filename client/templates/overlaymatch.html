@@ -1,0 +1,331 @@
+<template name="overlaymatch">
+    {{#if Template.subscriptionsReady}}
+    <div class="overlay match" style="opacity:0.5">
+        <a href="#" class="js-close-overlay overlay-dismiss"><span class="icon-cross"></span></a>
+        <div class="content-scrollable">
+        <div class="matchoverlay">
+            {{#each allmatches time}}
+            <table>
+               <tr>    
+                   <td></td>
+                   <td></td>
+                   <td><i class="flag flag-16 flag-{{gT1.code}}"></i></td>
+                   <td>({{getmeanpower this.T1}})</td>                   
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   
+                   {{#if isequal type 'stroke'}}
+                   <td></td>
+                   <td></td>
+                   {{else}}                   
+                   <td>({{getmeanpower this.T2}})</td>
+                   <td> <i class="flag flag-16 flag-{{gT2.code}}"></i> </td>
+                   {{/if}}
+                   <td></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <th colspan=5>
+                       <right>
+                           {{#each this.T1}} 
+                           {{this}}<br> 
+                           {{/each}}
+                       </right>
+                   </th>
+                   <th></th>
+                   <th colspan=5>
+                       <left>
+                           {{#each this.T2}} 
+                           {{this}}<br> 
+                           {{/each}}
+                       </left>
+                   </th>
+               </tr>
+                {{#unless isequal type 'stroke'}}
+               <tr>    
+                   <td colspan=5>Match Power: {{getNumber stats.powerT1}}</td>
+                   <td>{{T1pts}}-{{T2pts}}</td>
+                   <td colspan=5>Match Power: {{getNumber stats.powerT2}}</td>
+               </tr>
+                {{/unless}}
+                
+                {{#unless isequal type 'stroke'}}
+               <tr>
+                   <th colspan=5>{{getmatchstatus matchID 1}}</th>
+                   <th>{{#if isequal status 0}}AS{{/if}}</th>
+                   <th colspan=5>{{getmatchstatus matchID -1}}</th>
+               </tr>
+                {{else}}
+                <tr>
+                   <th colspan=5>Gross: {{total18G matchID}} ({{#if status}} {{getNumber status}} {{else}}E{{/if}})</th>
+                   <th></th>
+                   <th colspan=5>Net: {{total18N matchID}} ({{#if netstatus}} {{getNumber netstatus}} {{else}}E{{/if}})</th>
+               </tr>
+                {{/unless}}
+               <!--
+               <tr>
+                   {{#if iscurrentUser}}
+                       {{#unless hasBet}}
+                        {{#if onTeam 1}}
+                       <th colspan=3>
+                           <select id="T1amount{{matchID}}">
+                               <option value=0 selected>Amount</option>
+                               <option value=5>$5</option>
+                               <option value=10>$10</option>
+                               <option value=15>$15</option>
+                               <option value=20>$20</option>
+                           </select>
+                       </th>
+                       <th colspan=2><left>{{T1odds}}</left></th>
+                       <th class='bet' id='{{matchID}}'>BET</th>
+                       <th colspan=5></th>
+                       {{/if}}
+                       {{#if onTeam 0}}
+                       <th colspan=5></th>
+                       <th class='bet' id='{{matchID}}'>BET</th>
+                       <th colspan=2><right>{{T2odds}}</right></th>
+                       <th colspan=3>
+                           <select id="T2amount{{matchID}}">
+                               <option value=0 selected>Amount</option>
+                               <option value=5>$5</option>
+                               <option value=10>$10</option>
+                               <option value=15>$15</option>
+                               <option value=20>$20</option>
+                           </select>
+                       </th>
+                       {{/if}}
+                       {{else}}
+                       <th colspan=11 id="wagerlogin">ALREADY BET</th>
+                       {{/unless}}
+                   {{else}}
+                   <th colspan=11 id="wagerlogin">LOGIN TO WAGER</th>
+                   {{/if}}
+               </tr>
+                -->
+               <tr class="scorekeeper">
+                   <td colspan=4>{{type}}, {{course}}</td>
+                   <td colspan=3>#{{matchID}}</td>
+                   <td colspan=4>{{formatdate time 'hh:mm A'}}</td>
+               </tr>
+                {{#unless isequal type 'stroke'}}
+                <tr>
+                    <td>P</td>
+                    {{#each frontnine}}
+                    <td>{{getpar ../matchID this}}</td>
+                    {{/each}}
+                    <td>OUT</td>
+                </tr>                
+                <tr>
+                   <td></td>
+                   {{#each frontnine}}
+                   <!--<td>
+                       <svg>
+                       <circle stroke='red' fill={{getholeresult this ../matchID}} 
+                               stroke-width={{#if isholeselected this ../matchID}}3{{else}}0.25{{/if}} />
+                   <text x="50%" y="50%" text-anchor="middle" font-size="8">{{this}}</text>
+                       </svg>
+                   </td>-->
+                    
+                    <td class="clickhole {{#if isholeselected this ../matchID}} chosen {{/if}}" id={{this}}>
+                        {{#with getholeresult2 this ../matchID}}
+                        {{#if this.flag}} 
+                            <i class="flag flag-16 flag-{{this.code}}"></i>
+                        {{else}} 
+                            {{this.result}}
+                        {{/if}}
+                        
+                        {{/with}}
+                    </td>
+                    {{/each}}
+                   <td>
+                        {{#if compare statusF9 0}}
+                            {{statusF9}} UP
+                       {{else}}
+                           {{#if compare 0 statusF9}}
+                                {{multiply -1 statusF9}} UP
+                           {{else}}
+                                AS
+                           {{/if}}
+                       {{/if}}
+                    </td>    
+                </tr>                
+                <tr>
+                    <td>P</td>
+                    {{#each backnine}}
+                    <td>{{getpar ../matchID this}}</td>
+                    {{/each}}
+                    <td>IN</td>
+                </tr>
+                <tr>
+                   <td></td>
+                    {{#each backnine}}
+                   <!--<td>
+                       <svg>
+                       <circle stroke='red' fill={{getholeresult this ../matchID}} 
+                               stroke-width={{#if isholeselected this ../matchID}}3{{else}}0.25{{/if}} />
+                   <text x="50%" y="50%" text-anchor="middle" font-size="8">{{this}}</text>
+                       </svg>
+                   </td>-->
+                    
+                    <td class="clickhole {{#if isholeselected this ../matchID}} chosen {{/if}}" id={{this}}>
+                        {{#with getholeresult2 this ../matchID}}
+                        {{#if this.flag}} 
+                            <i class="flag flag-16 flag-{{this.code}}"></i>
+                        {{else}} 
+                            {{this.result}}
+                        {{/if}}
+                        
+                        {{/with}}
+                    </td>
+                    {{/each}}
+                    <td>
+                        {{#if compare statusB9 0}}
+                            {{statusB9}} UP
+                       {{else}}
+                           {{#if compare 0 statusB9}}
+                                {{multiply -1 statusB9}} UP
+                           {{else}}
+                                AS
+                           {{/if}}
+                       {{/if}}
+                    </td>
+                </tr>
+                
+                {{else}}
+                
+                <tr>
+                    <td>P</td>
+                    {{#with getsession 'scorekeepinghole'}}
+                    <td class="{{#if isequal this 1}} hS {{/if}}">{{getpar ../matchID 1}}</td>
+                    <td class="{{#if isequal this 2}} hS {{/if}}">{{getpar ../matchID 2}}</td>
+                    <td class="{{#if isequal this 3}} hS {{/if}}">{{getpar ../matchID 3}}</td>
+                    <td class="{{#if isequal this 4}} hS {{/if}}">{{getpar ../matchID 4}}</td>
+                    <td class="{{#if isequal this 5}} hS {{/if}}">{{getpar ../matchID 5}}</td>
+                    <td class="{{#if isequal this 6}} hS {{/if}}">{{getpar ../matchID 6}}</td>
+                    <td class="{{#if isequal this 7}} hS {{/if}}">{{getpar ../matchID 7}}</td>
+                    <td class="{{#if isequal this 8}} hS {{/if}}">{{getpar ../matchID 8}}</td>
+                    <td class="{{#if isequal this 9}} hS {{/if}}">{{getpar ../matchID 9}}</td>
+                    {{/with}}
+                    <td>OUT</td>
+                </tr>                
+                <tr class="gross">
+                    <td></td>
+                    {{#each frontnine}}
+                    <td>{{{getGROSSresult this ../matchID}}}</td>                    
+                    {{/each}}
+                    <td>{{total9G matchID 0}}</td>
+                </tr>
+                
+                {{#if handicap}}
+                <tr class="net">
+                     <td></td>
+                    {{#each frontnine}}
+                    <td class="{{getsastroke ../matchID this}}">{{{getNETresult this ../matchID}}}</td>
+                    {{/each}}
+                    <td>{{total9N matchID 0}}</td>
+                </tr>
+                {{/if}}
+                
+                <tr>
+                    <td>P</td>
+                    {{#with getsession 'scorekeepinghole'}}
+                    <td class="{{#if isequal this 10}} hS {{/if}}">{{getpar ../matchID 10}}</td>
+                    <td class="{{#if isequal this 11}} hS {{/if}}">{{getpar ../matchID 11}}</td>
+                    <td class="{{#if isequal this 12}} hS {{/if}}">{{getpar ../matchID 12}}</td>
+                    <td class="{{#if isequal this 13}} hS {{/if}}">{{getpar ../matchID 13}}</td>
+                    <td class="{{#if isequal this 14}} hS {{/if}}">{{getpar ../matchID 14}}</td>
+                    <td class="{{#if isequal this 15}} hS {{/if}}">{{getpar ../matchID 15}}</td>
+                    <td class="{{#if isequal this 16}} hS {{/if}}">{{getpar ../matchID 16}}</td>
+                    <td class="{{#if isequal this 17}} hS {{/if}}">{{getpar ../matchID 17}}</td>
+                    <td class="{{#if isequal this 18}} hS {{/if}}">{{getpar ../matchID 18}}</td>
+                    {{/with}}
+                    <td>IN</td>
+                </tr>
+                <tr class="gross">
+                     <td></td>
+                    {{#each backnine}}
+                        <td>
+                            {{{getGROSSresult this ../matchID}}}
+                        </td>         
+                    {{/each}}
+                    <td>{{total9G matchID 1}}</td>
+                </tr>
+                {{#if handicap}}
+                <tr class="net">
+                     <td></td>
+                    {{#each backnine}}
+                    <td class="{{getsastroke ../matchID this}}">{{{getNETresult this ../matchID}}}</td>
+                    {{/each}}
+                    <td>{{total9N matchID 1}}</td>
+                </tr>
+                {{/if}}
+                
+            {{/unless}}
+                
+                
+                
+                
+                
+                
+                {{#if isglobalscorekeeper matchID}}
+                {{#if isdayaccessopen matchID}}
+                <tr class="scorekeeper"><th colspan=11></th></tr>
+                <tr>
+                    <th class="holeup spane1" >H+</th>
+                    <th class="holedown spane1">H-</th>
+                    <th></th>
+                    {{#unless isequal type 'stroke'}}
+                    <th colspan=2 class="holechange spane2" id=1>{{cupinfo.T1}}</th>
+                    <th colspan=2 class="holechange spane2" id=-1>{{cupinfo.T2}}</th>
+                    <th colspan=2 class="holechange spane1" id=0>PUSH</th>
+                    <th colspan=2 class="holechange spane1" id=2>CLEAR</th>
+                    {{else}}
+                    <th colspan=4></th>
+                    <th colspan=4>
+                        <select class="holeresult" id="holeresult{{matchID}}">
+                          <option value="" selected>choose</option>    
+                          <option value="N">CLEAR</option>
+                          <option value=1>1</option>
+                          <option value=2>2</option>
+                          <option value=3>3</option>
+                          <option value=4>4</option>
+                          <option value=5>5</option>
+                          <option value=6>6</option>
+                          <option value=7>7</option>
+                          <option value=8>8</option>
+                          <option value=9>9</option>
+                          <option value=10>10</option>
+                        </select>
+                    </th>
+                    {{/unless}}
+                </tr>
+                {{/if}}
+                <tr><td colspan=11></td></tr>
+                {{#if isAdmin}}
+                <tr>
+                    <th colspan=6 class="sim spane2">SIM</th>
+                    <th colspan=5 class="reset spane2">RESET</th>
+                </tr>  
+                {{/if}}
+                {{/if}}
+                
+                
+                
+                
+                <tr>
+                   <th colspan=11><div class = "js-share"><span class="icon-camera"></span> CUP BROADCAST</div>
+                </th>    
+                </tr>
+                
+            </table>
+             <br>
+            {{/each}}
+        </div>     
+            </div>
+        
+    </div>
+    {{else}}
+    loading...
+    {{/if}}
+</template>

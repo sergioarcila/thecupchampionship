@@ -1,0 +1,27 @@
+<template name="mappage">
+    {{>nav title="Home" black=false back=false}}
+    
+  <div class="page home">
+    <div class="content-scrollable">
+        <!--{{addmarkers}}-->
+    <div style="margin-top:15%;height:80%;width:100%;">    
+    {{#unless geolocationError}}
+      {{> googleMap name="map" options=mapOptions}}
+    {{else}}
+      Geolocation failed: {{geolocationError}}
+    {{/unless}}
+        
+    </div>    
+    <div style="margin-top:0%;height:10%;width:100%;">    
+        <center><select class="currentmapmatch" id="currentmapmatch">
+              {{#each getmatches}}
+              <option value={{matchID}} {{iscurrentmapmatch matchID}}>{{matchID}}: {{lastname T1.[0]}} {{lastname T1.[1]}} vs. {{lastname T2.[0]}} {{lastname T2.[1]}}</option>
+              {{/each}}
+        </select></center>
+        <div class='add'>ADD</div>
+    </div>    
+        
+    </div>
+  </div>
+</template>
+

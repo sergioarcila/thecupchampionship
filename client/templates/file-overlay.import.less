@@ -1,0 +1,404 @@
+.overlay.share {
+    .overlay1 {position:absolute; width:200px;height:100%; background-color:red;border:0px solid white;}
+    .overlay {position:absolute; width:50%;height:8%;border:0px solid white; margin-top:25%; margin-left:48%;float:right;
+        .bck{
+            background-color:rgba(26,64,56,1); width:100%;height:100%; 
+            img{height:97%;width:auto;}
+            .teams{text-transform: uppercase;vertical-align: middle; line-height: 1.5em; width:68%;height:40%;margin-left:15%;margin-top:-27%; color:white;font-size:0.8em;font-weight: 1100; background:-webkit-linear-gradient(left, rgba(26,64,56,1) ,rgba(26,64,56,1), red); .small{font-size:0.5em;}}
+            .status{vertical-align: middle;text-align: center; line-height: 1.8em; width:14%;height:40%;margin-left:85%;margin-top:-11.5%;color:white;font-size:0.8em;font-weight: 1100; background:red;}
+            .infobck{width:68%;height:40%;margin-left:15%;margin-top:3%;border:0px solid white;
+                .hole {color:white;font-size:0.8em;vertical-align: middle; line-height: 1.5em; text-align: center; width:24%;height:100%;border:0px solid white;}
+                .yardage {color:white;width:24%;font-size:0.8em;vertical-align: middle; line-height: 1.5em; text-align: center;margin-left:25%;margin-top:-17%;height:100%;border:0px solid white;}
+                .stroke {color:white;width:52%;font-size:0.6em;vertical-align: middle; line-height: 1.8em; text-align: center;margin-left:47%;margin-top:-17%;height:100%;border:0px solid white;}
+            }
+        }
+    }
+    
+    table {width:100%; table-layout:fixed; text-align:center;border-radius: 10px;}
+    tr {height: 2em;border:1px solid black;}
+    
+    .swiper-container {
+    width: 100%;
+    height: 200px; position:relative;
+}  
+  .wrapper-camera {
+    .position(absolute, auto, 0, 0, 0, 100%);
+    text-align: center;
+
+    .btn-camera {
+      margin-bottom: .5rem;
+    }
+    .subtext-camera {
+      .font-s2;
+      color: @color-medium;
+      margin-bottom: .75rem;
+    }
+  }
+
+  .bg-image {
+    //.position(absolute, 3rem, 0, 0, 0, 100%, 50%);
+    position: relative;
+    margin-top: 3rem;
+    height: 50%;
+  }
+
+  .form-share {
+    .background-image(linear-gradient(top, rgba(255,255,255,.9), rgba(255,255,255,1) 10%, @color-empty 100%));
+    .position(absolute, auto, 0, 0, 0, 100%);
+    .transform(translate3d(0,0,0));// Gpu rendering
+    min-height: 50%;
+    padding-bottom: 3rem;
+
+    .form-group {
+      .display(flex);
+      .flex-wrap(wrap);
+
+      margin-bottom: 3rem;
+
+      .avatar,
+      .message-share {
+        .flex(1);
+      }
+      .message-share {
+        width: 100%;
+      }
+
+      .avatar {
+        height: 2.5rem;
+        width: 2.5rem;
+        max-width: 2.5rem;
+        float: left;
+        margin-left: 1rem;
+        margin-top: 1rem;
+      }
+
+      .message-share {
+        height: 12em;
+        resize: none;
+      }
+    }
+
+    .wrapper-checkbox {
+      .position(absolute, auto, auto, 3rem, auto, 100%, 3rem);
+      border-top: 1px solid @color-rare;
+      border-bottom: 1px solid @color-rare;
+
+      .checkbox { padding: 1rem; }
+    }
+  }
+
+  //.btn-primary { .position(relative, auto, 0, 0, 0, 70%); margin-top:0.5em; }
+    
+    
+    
+    
+    .videowrapper {position:absolute;width:100%;height:100%;border:2px solid black;}
+.transitionscreen {display:none; background-image:url('img/flags/thecup/Main/transition1.jpg'); width:100%;height:100%;z-index:50;}
+    .transitionheader{
+        width: 96%; position:relative;
+        top:5%; height:23%;background: url('img/flags/thecup/Main/transition2017.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        left:2%;
+        border-radius: 5px; opacity:0.9;
+    }
+    
+
+    
+.transition {
+  font-weight: 1000; font-size:1em;color:white;
+  background:linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0));
+  position: relative;
+  width:96%; height:auto; 
+  top:2%;left:2%;
+    border-radius: 10px;
+}
+    .stransition {
+  font-weight: 1000; font-size:1em;color:white;
+  background:linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0));
+  position: relative;
+  width:96%; height:auto; 
+  top:5%;left:2%;
+    border-radius: 10px;
+}
+    
+.header {
+    top:5px; border:1px solid white;
+  width:99%; left:0.5%;  height: 50px; color: black;position:relative;
+    font-size:0.75em; border-radius: 2.5px;
+     line-height:1.75em; font-weight: 1000;
+    text-transform:uppercase;
+     background: linear-gradient(to top left, lighten(black,5%), lighten(black,5%),lighten(black,40%));
+    opacity:0.95;border:0px solid white; border-radius: 5px;
+    box-shadow: 0px;
+}
+    .iC {left:0%;height:100%; position:absolute; img{height:120%; display:block;}}
+    .tx1 {left:18%; text-align: center;font-size:1.5em;line-height:1em;color:white;background:transparent;}
+    .tx2 {left:45%; text-align: center;font-size:1.25em;line-height:1em;color:white; background:transparent;}
+    
+.t {.type-bold();
+  top:15px; border:1px solid white;
+  width:99%; left:0.5%;  height: 1.75em; color: black;position:relative;
+    font-size:0.85em; border-radius: 2.5px;
+      font-weight: 1000;line-height: 1.75em;
+    text-transform:uppercase;
+    background-color:@color-cup1;
+  opacity:0.95;
+}
+    .teams {letter-spacing: 2px;color:white;}
+    
+.t0 {  
+  left: 0%;top:0%;
+  width:8%; height:100%;
+  text-align:center;
+  border:0px solid white; position:absolute;
+  border-top-right-radius: 0px;border-bottom-right-radius: 0px;
+  
+    
+}
+.t1 {
+  left:8%;top:0%;
+  width:38%; height:100%;
+  text-align:right; padding-right:3px;
+  border:0px solid white; position:absolute;
+  border-top-left-radius: 0px;border-bottom-left-radius: 0px;   
+  box-shadow: 0px;overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.t2 {
+   left:46%;top:0%;
+  width:6%; height:100%;
+ text-align:center;
+  border:0px solid white; position:absolute;
+  background:linear-gradient(darken(white,30%), black);
+  color:white;
+    box-shadow: none;
+}
+.t3 {
+   left:52%;top:0%;
+  width:38%; height:100%;
+ text-align:left;padding-left:3px;
+  border:0px solid white; position:absolute;
+  border-top-right-radius: 0px;border-bottom-right-radius: 0px;
+} 
+.t4 {
+   left:90%;top:0%;
+  width:10%; height:100%;
+ text-align:center;
+  border:0px solid white; position:absolute;
+  border-top-left-radius: 0px;border-bottom-left-radius: 0px;    
+}   
+    
+.ts {.type-bold();
+  top:25px; 
+  width:99%; left:0.5%;  height: 2em; color: white;position:relative;
+    font-size:0.85em; border-radius: 2.5px;
+     line-height:1.75em; font-weight: 1000;
+    text-transform:uppercase;
+    background-color:lighten(@color-secondary,30%);
+  opacity:0.85;
+}
+    
+.ts0 {  
+  left: 0%;top:0%;
+  width:10%; height:100%;
+  text-align:center;
+  border-right:1px solid white; position:absolute;
+    
+}
+.ts1 {
+  left:10%;top:0%;
+  width:50%; height:100%;
+  text-align:left; padding-left:10px;position:absolute;
+  box-shadow: 0px;
+}
+.ts2 {
+   left:60%;top:0%;
+  width:10%; height:100%;
+ text-align:center;padding-left:3px;position:absolute;
+}
+.ts3 {
+   left:70%;top:0%;
+  width:10%; height:100%;
+ text-align:center;padding-left:3px;position:absolute;
+} 
+.ts4 {
+   left:80%;top:0%;
+  width:10%; height:100%;
+ text-align:center; position:absolute;
+}   
+.ts5 {
+   left:90%;top:0%;
+  width:10%; height:100%;
+ text-align:center; position:absolute;
+}  
+    
+.footer {
+    left:0%;top:40px;
+  width:100%; height:3em;
+ text-align:center;
+  border:1px solid white; position:relative;
+  
+}
+.s {color:white;}    
+    
+ video {position:relative; height: 100%;width: 100%; }
+ audio {position:absolute; height: 100%;width: 100%; z-index: 5;}    
+  
+ .small {font-size: 0.6em; text-overflow: ellipsis;}
+
+ .box-set {
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+  background:rgba(24,64,56,0.95);
+  height: 200px; display:none;
+     font-size:14px; line-height:1em;
+  position: relative;
+  border:0px solid black;
+  width:200px; height:50px; 
+  top:0px;left:25px;
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(153,153,153,1);
+  -moz-box-shadow: 5px 5px 5px 0px rgba(153,153,153,1);
+  box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.6);
+}
+.box {
+  border:0px solid black;
+  height: 100%;
+  position: absolute;
+  width: 80px;color:white;
+  vertical-align: middle; line-height: 1em;
+    
+}
+.box-1 {
+ top:0; 
+ width:15%;
+ background-image: url("/img/flags/thecup/Main/overlay1.png");
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+    
+.box-2 {
+    .type-bold();
+  top: 5%;left: 15%;
+  height:40%; width:67%;
+  background: linear-gradient(to right, rgba(24,64,56,0.9),rgb(199,33,39),rgb(199,33,39)); 
+  padding:0 2px; font-size:0.8em; 
+    letter-spacing: 0px; text-transform: uppercase;   
+    text-overflow:clip;
+}
+    
+    .pName {height:100%;line-height:2em;}
+.box-3 {
+  top: 50%;left: 15%; 
+  height:50%; width:65%; font-size:1.25em;
+  text-align: center; line-height: 1.5em;
+  }
+
+  .box-31 {
+    top: 10%;left: 2%; 
+    height:75%; width:25%;
+    font-size: 0.7em; 
+    background: linear-gradient(to top right, rgb(24,64,56),rgb(24,64,56),rgb(24,64,56),rgba(117,117,117,1));
+    } 
+  .box-32 {
+  top: 10%;left: 27%; 
+  height:80%; width:30%;
+  font-size: 0.7em;
+  background: linear-gradient(to top right, rgb(24,64,56),rgb(24,64,56),rgb(24,64,56),rgba(117,117,117,1));
+  }
+  .box-33 {
+  top: 10%;left: 60%; 
+  height:80%; width:43%;
+  font-size: 0.7em;
+  background: linear-gradient(to top right, rgb(24,64,56),rgb(24,64,56),rgb(24,64,56),rgba(117,117,117,1));
+  }
+
+.box-4 {
+  left: 84%;top:5%;
+  width:15%; height:40%; font-weight:1000;
+  text-align:center; line-height: 1.5em;
+  background-color:rgb(199,33,39);
+}
+.box-5 {
+  left: 85%;top:50%;
+  width:15%; height:50%;
+  line-height: 2em; text-align:center;
+}
+.box-6 {
+    .type-bold();
+  left: 0%;bottom:-28%; background:linear-gradient(to right, rgba(0,0,255,0.9),rgba(0,0,255,0.9),rgba(0,0,255,0.4));
+  width:auto; height:25%; border:0px solid white; padding:5px 5px 5px 5px;
+  line-height: 2em; text-align:center; font-size:0.8em; text-transform: uppercase; line-height: 0.5em; display:none;
+}    
+
+
+    .bummary {
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+  font-size: 16px; 
+  font-weight: 1000; color:white;
+  position: absolute;display:none;
+  border:0px solid white;
+  width:140px; height:51px; 
+  bottom:25px;right:15px;
+   background:transparent;
+        text-align:center;
+   
+}
+    .bummary1 {
+        position:relative;
+        background:rgba(0,0,0,0.5);
+        border-radius: 3px;
+        width:100%; height:24px;
+    }
+    .bet-1 { 
+        text-align: center;
+        left: 0%;top:0%;
+        width:100%; height:100%;
+        background:transparent;
+        border:0px;
+    }
+    .bummary2 {
+        position:relative;
+        background:rgba(0,0,0,0.5);
+        border-radius: 1px; top:1px;
+        width:100%; height:14px;
+    }
+    .bet-2 { 
+       text-align: center;
+        font-size: 12px;
+        background: transparent;
+        border: 0px;
+        position: absolute;
+        width: 100%; 
+        left: 0px;
+    }
+    .bummary3 {
+        position:relative;
+        background:rgba(0,0,0,0.5);
+        border-radius: 1px; top:1px;
+        width:100%; height:14px;
+    }
+    .bet-3 { text-align: center;
+       text-align: center;
+        font-size: 12px;
+        background: transparent;
+        border: 0px;
+        position: absolute;
+        width: 100%; 
+        left: 0px;
+    }
+    
+.cuplogo {
+  position: absolute;
+  width:40px; height:75px;
+  bottom:10px;left:25px; border:0px solid white;
+    img {height:100%; opacity:0.2;}
+}    
+    
+    
+    
+    
+    
+}

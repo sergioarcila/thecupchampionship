@@ -1,0 +1,168 @@
+.list-activities {
+  background: @color-empty;
+  min-height: 1em;
+  overflow: auto;
+  position: relative;
+
+  .wrapper-message { top: 50%; }
+}
+
+.item-activity {
+  .transform(translate3d(0,0,0));
+  background: @color-empty;
+  display: block;
+  float: left;
+  overflow: hidden;
+  padding: 0em;
+  position: relative;
+  width: 100%;
+  border-left: 0px solid @color-rare;
+  -moz-box-shadow:inset 0 3px @color-rare;
+    box-shadow:inset 0 3px @color-rare;
+    
+  .attribution {
+    .par {color:@color-secondary}
+    .gross {color:@color-secondary}
+    .net {color:@color-secondary}  
+    .h {background-color:rgba(0,0,0,0.2)}    
+    .hc {background-color:rgba(255,255,0,0.2)}
+    .hcc {background-color:rgba(255,0,0,0.2)}  
+    table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-left:0%;
+    
+    }
+
+    th {
+    padding: 1px;
+    text-align:center;
+    border-bottom: 0px solid #ddd;
+        border:0px solid @color-secondary;
+    width:5%;
+    height:1.1em;
+    }  
+      
+    td {
+    padding: 1px;
+    text-align: center;
+    border:0px solid @color-secondary;
+    width:5%;
+    height:2em;
+    }   
+      
+    .font-s2;
+    display: block;
+    margin-bottom: .0rem;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+    .meta {
+      color: @color-well;
+      overflow: hidden;
+      display: block;
+      padding: 0.25em 0.25em 0em 0.25em;
+        
+    }
+
+    .author { .type-black; }
+
+    .recipe {
+      .type-bold;
+      color: @color-primary;
+      float:right;
+    }
+
+    .location { color: @color-medium-rare; }
+  }
+
+  .bg-image {
+    display: block;
+    height: 16em;
+    width: 100%;
+  }
+}
+
+
+
+.item-draft {
+  .transform(translate3d(0,0,0));
+  background:transparent;
+  display: block;
+  float: left;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: .1em;
+  position: relative;
+  width: 100%;
+  text-overflow: hidden;
+  color:black;
+    
+  .attribution {
+    table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-left:0%;
+    border-top:0px solid white;    
+    }
+
+    th {
+    padding: 1px;
+    text-align:center;
+    border-bottom: 0px solid #ddd;
+    width:6%;
+    height:1.1em;
+    }   
+    td {
+    padding: 1px;
+    text-align: center;
+    border:0px solid white;
+    width:6%;
+    height:2em;
+        
+    }   
+      
+    .font-s2;
+    display: block;
+    margin-bottom: .1rem;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    
+
+    .avatar {
+      float: left;
+      height: 1rem;
+      margin-right: .25rem;
+      width: 2rem;
+      border: 0px solid black;
+    }
+      
+
+    .meta {
+      color: @color-well;
+      overflow: hidden;
+      display: block;
+    }
+
+    .author { .type-black;}
+
+    .recipe {
+      .type-bold;
+      color: @color-primary;
+      float:right;
+    }
+
+    .location { color: @color-medium-rare; }
+  }
+
+  .bg-image {
+    display: block;
+    height: 16em;
+    width: 100%;
+  }
+}
+
+
+    

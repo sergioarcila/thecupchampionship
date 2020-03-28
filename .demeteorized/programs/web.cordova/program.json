@@ -1,0 +1,1446 @@
+{
+  "format": "web-program-pre1",
+  "manifest": [
+    {
+      "path": "ce6033f960b80c2406fa4bbafc19035f43ef6401.css",
+      "where": "client",
+      "type": "css",
+      "cacheable": true,
+      "url": "/ce6033f960b80c2406fa4bbafc19035f43ef6401.css?meteor_css_resource=true",
+      "size": 61900,
+      "hash": "ce6033f960b80c2406fa4bbafc19035f43ef6401"
+    },
+    {
+      "path": "packages/oauth/end_of_popup_response.js",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/oauth/end_of_popup_response.js",
+      "size": 1137,
+      "hash": "5f7096e4ecf53ebc643000f14fa2792f87e8a5fd"
+    },
+    {
+      "path": "packages/oauth/end_of_redirect_response.js",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/packages/oauth/end_of_redirect_response.js",
+      "size": 273,
+      "hash": "1559a55888ce222bf0bff82b8461a65b8fb38027"
+    },
+    {
+      "path": "app/apple-touch-icon-precomposed.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/apple-touch-icon-precomposed.png",
+      "size": 1882,
+      "hash": "fdd15b785c274bab54c188d74ecc31c0a57e9ede"
+    },
+    {
+      "path": "app/favicon.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/favicon.png",
+      "size": 1644,
+      "hash": "4c69dc4a820a37e46c0837844d6c0320702f8c12"
+    },
+    {
+      "path": "app/font/lato-black-webfont.eot",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/font/lato-black-webfont.eot",
+      "size": 27866,
+      "hash": "e4bb7d44fbc70026766752aaf920dc6f5f7abd57"
+    },
+    {
+      "path": "app/font/lato-black-webfont.ttf",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/font/lato-black-webfont.ttf",
+      "size": 57204,
+      "hash": "901ae38faa0a6f62fc5483c0ece903ed63b6b6fd"
+    },
+    {
+      "path": "app/font/lato-black-webfont.woff",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/font/lato-black-webfont.woff",
+      "size": 31244,
+      "hash": "0e22c3ce73363dcb2c8361df09456594435cbcc1"
+    },
+    {
+      "path": "app/font/lato-bold-webfont.eot",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/font/lato-bold-webfont.eot",
+      "size": 28830,
+      "hash": "41532b7f9375b6ecaefbf35cadd98bb7b595de56"
+    },
+    {
+      "path": "app/font/lato-bold-webfont.ttf",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/font/lato-bold-webfont.ttf",
+      "size": 58344,
+      "hash": "ab94e713bb3bab32e66cecf73d7766abe6a9716e"
+    },
+    {
+      "path": "app/font/lato-bold-webfont.woff",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/font/lato-bold-webfont.woff",
+      "size": 32396,
+      "hash": "81cb51c354057a0b1330f228ac5e042dcf85d4ec"
+    },
+    {
+      "path": "app/font/lato-italic-webfont.eot",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/font/lato-italic-webfont.eot",
+      "size": 25667,
+      "hash": "e0f90c0c5af673758e4741b94ba219ba8409736b"
+    },
+    {
+      "path": "app/font/lato-italic-webfont.ttf",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/font/lato-italic-webfont.ttf",
+      "size": 46036,
+      "hash": "8da26a7ddd0d89986aa12c4cca20737059f1ca4a"
+    },
+    {
+      "path": "app/font/lato-italic-webfont.woff",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/font/lato-italic-webfont.woff",
+      "size": 28316,
+      "hash": "83d8baf5c1c4da9f6d4042a28387539ae1fb87a2"
+    },
+    {
+      "path": "app/font/lato-regular-webfont.eot",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/font/lato-regular-webfont.eot",
+      "size": 28223,
+      "hash": "4117ce0ae341b5be8e3f7901796c68958257bdd1"
+    },
+    {
+      "path": "app/font/lato-regular-webfont.ttf",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/font/lato-regular-webfont.ttf",
+      "size": 57528,
+      "hash": "5044902ad22be454f56c53c3e4c8646a61c542b3"
+    },
+    {
+      "path": "app/font/lato-regular-webfont.woff",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/font/lato-regular-webfont.woff",
+      "size": 31816,
+      "hash": "27a3569862b0912af0f110f1a8583954a69639b1"
+    },
+    {
+      "path": "app/font/lora-bold-subset.eot",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/font/lora-bold-subset.eot",
+      "size": 18448,
+      "hash": "49e17fedc442775efd26a5c148ccfeb29269fafd"
+    },
+    {
+      "path": "app/font/lora-bold-subset.ttf",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/font/lora-bold-subset.ttf",
+      "size": 36832,
+      "hash": "ed7392cb749f1826eaa65a13a4bed36885faaf82"
+    },
+    {
+      "path": "app/font/lora-bold-subset.woff",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/font/lora-bold-subset.woff",
+      "size": 18988,
+      "hash": "b434132624d75724ba22f2a8d9c315f64e9371fc"
+    },
+    {
+      "path": "app/icon/market.eot",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/icon/market.eot",
+      "size": 6040,
+      "hash": "5b880ae6a276229ad837b7cbc5a682b66cefd897"
+    },
+    {
+      "path": "app/icon/market.svg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/icon/market.svg",
+      "size": 17460,
+      "hash": "e1bcd4eb741f7023d7d8f86bb0fe746b66a92aa0"
+    },
+    {
+      "path": "app/icon/market.ttf",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/icon/market.ttf",
+      "size": 5880,
+      "hash": "1c596f06e3be858c0bd287a2a5c2555d692abadd"
+    },
+    {
+      "path": "app/icon/market.woff",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/icon/market.woff",
+      "size": 5956,
+      "hash": "355bbe4249346ed981ab2fe86ce2ef9bb928054a"
+    },
+    {
+      "path": "app/img/activity/activity-placeholder-strawberry-640x640.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/activity/activity-placeholder-strawberry-640x640.jpg",
+      "size": 60009,
+      "hash": "806a1b158b1c26eb766a0c228419cb1e3005b6ad"
+    },
+    {
+      "path": "app/img/app/GER_banner.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/app/GER_banner.png",
+      "size": 131325,
+      "hash": "df468cad56e0024b03fb070e9fe228663f648520"
+    },
+    {
+      "path": "app/img/app/TUR_banner.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/app/TUR_banner.png",
+      "size": 2200,
+      "hash": "e4fbb4b2bcfa1f79cf6bb72a476cb6d493beb7dd"
+    },
+    {
+      "path": "app/img/app/bg-about-640x540.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/app/bg-about-640x540.jpg",
+      "size": 583522,
+      "hash": "1b80ffe82471cc21b2d17b1b3d0197caf4017673"
+    },
+    {
+      "path": "app/img/app/bg-home-640x655.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/app/bg-home-640x655.jpg",
+      "size": 232466,
+      "hash": "5139ae38b267589f5cb1d36c7f5aa46431fc86a6"
+    },
+    {
+      "path": "app/img/app/bg-menu-640x1136.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/app/bg-menu-640x1136.jpg",
+      "size": 17839,
+      "hash": "44503177f8678e7a015e88e33bbaacb4ec76307a"
+    },
+    {
+      "path": "app/img/app/chrome-iphone6-432x882@2x.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/app/chrome-iphone6-432x882@2x.jpg",
+      "size": 89340,
+      "hash": "606d7954c54e718e6df8118b10f2fc027a6fd95e"
+    },
+    {
+      "path": "app/img/app/cuplogo.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/app/cuplogo.jpg",
+      "size": 238086,
+      "hash": "4ec8389d519d0e70e6556376b55b7436487c80ff"
+    },
+    {
+      "path": "app/img/app/logo-local.svg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/app/logo-local.svg",
+      "size": 8985,
+      "hash": "0afccabf5b16d21c6ad5c172304cfca8d8d871a4"
+    },
+    {
+      "path": "app/img/app/title-about.svg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/app/title-about.svg",
+      "size": 822,
+      "hash": "88db80bc8e3fc8542b81e7555c752486df90720a"
+    },
+    {
+      "path": "app/img/flags/CUP_320x350.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/CUP_320x350.jpg",
+      "size": 537042,
+      "hash": "f9b820d80e2962e0624468e710d04d463331b542"
+    },
+    {
+      "path": "app/img/flags/AUS/AUS_16x48.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/AUS/AUS_16x48.png",
+      "size": 2247,
+      "hash": "be2ae3a4baf4e6efae5f377363bb8b9a6800b2f6"
+    },
+    {
+      "path": "app/img/flags/AUS/AUS_320x350.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/AUS/AUS_320x350.jpg",
+      "size": 995989,
+      "hash": "f76c969f9120b24dd9e7a0004ad1ca547c7a947a"
+    },
+    {
+      "path": "app/img/flags/AUS/AUS_tiny.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/AUS/AUS_tiny.png",
+      "size": 391,
+      "hash": "669946315d969e319c5a0d90941c0d93d7b8be8e"
+    },
+    {
+      "path": "app/img/flags/BIX/BIX_16x48.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/BIX/BIX_16x48.png",
+      "size": 574,
+      "hash": "a0c9931281043f5ef3bb5aae0028b29a5cfddf7a"
+    },
+    {
+      "path": "app/img/flags/BIX/BIX_320x350.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/BIX/BIX_320x350.jpg",
+      "size": 151817,
+      "hash": "0a394bdd1014d1e230fce7053e6d65a19c90ec64"
+    },
+    {
+      "path": "app/img/flags/BIX/BIX_640x480.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/BIX/BIX_640x480.jpg",
+      "size": 924050,
+      "hash": "da4288ff3acc9d4df581bbebe11bbff2f8b930fe"
+    },
+    {
+      "path": "app/img/flags/BIX/BIX_640x800.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/BIX/BIX_640x800.jpg",
+      "size": 1456958,
+      "hash": "d22eb63fbe854a2e51fb58a1da2ba74bffdcea26"
+    },
+    {
+      "path": "app/img/flags/BIX/BIX_tiny.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/BIX/BIX_tiny.png",
+      "size": 299,
+      "hash": "d13caaa9085d6e1fa63dda506d9bbbc153457091"
+    },
+    {
+      "path": "app/img/flags/GER/GER_16x48.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/GER/GER_16x48.png",
+      "size": 2308,
+      "hash": "35dc37f59bef3da698585ff993d7112952345096"
+    },
+    {
+      "path": "app/img/flags/GER/GER_320x350.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/GER/GER_320x350.jpg",
+      "size": 143906,
+      "hash": "bd66096c1ed5575bf84c2f3486b317c3bdd5d111"
+    },
+    {
+      "path": "app/img/flags/GER/GER_350x175.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/GER/GER_350x175.jpg",
+      "size": 119114,
+      "hash": "a55b5aacc320502d969c8ffc56f92ce6af0776ff"
+    },
+    {
+      "path": "app/img/flags/GER/GER_tiny.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/GER/GER_tiny.png",
+      "size": 380,
+      "hash": "ce50358acdf0f7d0140acd5ad66737f50dfd625f"
+    },
+    {
+      "path": "app/img/flags/HOF/HOF_16x48.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/HOF/HOF_16x48.png",
+      "size": 574,
+      "hash": "a0c9931281043f5ef3bb5aae0028b29a5cfddf7a"
+    },
+    {
+      "path": "app/img/flags/HOF/HOF_320x350.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/HOF/HOF_320x350.jpg",
+      "size": 151817,
+      "hash": "0a394bdd1014d1e230fce7053e6d65a19c90ec64"
+    },
+    {
+      "path": "app/img/flags/HOF/HOF_640x480.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/HOF/HOF_640x480.jpg",
+      "size": 924050,
+      "hash": "da4288ff3acc9d4df581bbebe11bbff2f8b930fe"
+    },
+    {
+      "path": "app/img/flags/HOF/HOF_640x800.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/HOF/HOF_640x800.jpg",
+      "size": 1456958,
+      "hash": "d22eb63fbe854a2e51fb58a1da2ba74bffdcea26"
+    },
+    {
+      "path": "app/img/flags/HOF/HOF_tiny.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/HOF/HOF_tiny.png",
+      "size": 299,
+      "hash": "d13caaa9085d6e1fa63dda506d9bbbc153457091"
+    },
+    {
+      "path": "app/img/flags/REX/REX_16x48.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/REX/REX_16x48.png",
+      "size": 574,
+      "hash": "a0c9931281043f5ef3bb5aae0028b29a5cfddf7a"
+    },
+    {
+      "path": "app/img/flags/REX/REX_320x350.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/REX/REX_320x350.jpg",
+      "size": 151817,
+      "hash": "0a394bdd1014d1e230fce7053e6d65a19c90ec64"
+    },
+    {
+      "path": "app/img/flags/REX/REX_640x480.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/REX/REX_640x480.jpg",
+      "size": 924050,
+      "hash": "da4288ff3acc9d4df581bbebe11bbff2f8b930fe"
+    },
+    {
+      "path": "app/img/flags/REX/REX_640x800.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/REX/REX_640x800.jpg",
+      "size": 1456958,
+      "hash": "d22eb63fbe854a2e51fb58a1da2ba74bffdcea26"
+    },
+    {
+      "path": "app/img/flags/REX/REX_tiny.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/REX/REX_tiny.png",
+      "size": 299,
+      "hash": "d13caaa9085d6e1fa63dda506d9bbbc153457091"
+    },
+    {
+      "path": "app/img/flags/SCO/SCO_16x48.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/SCO/SCO_16x48.png",
+      "size": 2027,
+      "hash": "8bebf177c4ea122ce41cb760c96d9ed03f6e6b7b"
+    },
+    {
+      "path": "app/img/flags/SCO/SCO_320x350.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/SCO/SCO_320x350.jpg",
+      "size": 148868,
+      "hash": "bf37c1e10575fba42115a8fa790e91489a53ca41"
+    },
+    {
+      "path": "app/img/flags/SCO/SCO_tiny.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/SCO/SCO_tiny.png",
+      "size": 695,
+      "hash": "6cc84d6f17bf0296e98e00c17faf490c32a9e258"
+    },
+    {
+      "path": "app/img/flags/SUT/SUT_16x48.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/SUT/SUT_16x48.png",
+      "size": 574,
+      "hash": "a0c9931281043f5ef3bb5aae0028b29a5cfddf7a"
+    },
+    {
+      "path": "app/img/flags/SUT/SUT_320x350.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/SUT/SUT_320x350.jpg",
+      "size": 151817,
+      "hash": "0a394bdd1014d1e230fce7053e6d65a19c90ec64"
+    },
+    {
+      "path": "app/img/flags/SUT/SUT_640x480.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/SUT/SUT_640x480.jpg",
+      "size": 924050,
+      "hash": "da4288ff3acc9d4df581bbebe11bbff2f8b930fe"
+    },
+    {
+      "path": "app/img/flags/SUT/SUT_640x800.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/SUT/SUT_640x800.jpg",
+      "size": 1456958,
+      "hash": "d22eb63fbe854a2e51fb58a1da2ba74bffdcea26"
+    },
+    {
+      "path": "app/img/flags/SUT/SUT_tiny.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/SUT/SUT_tiny.png",
+      "size": 299,
+      "hash": "d13caaa9085d6e1fa63dda506d9bbbc153457091"
+    },
+    {
+      "path": "app/img/flags/TUR/TUR_16x48.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/TUR/TUR_16x48.png",
+      "size": 574,
+      "hash": "a0c9931281043f5ef3bb5aae0028b29a5cfddf7a"
+    },
+    {
+      "path": "app/img/flags/TUR/TUR_320x350.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/TUR/TUR_320x350.jpg",
+      "size": 151817,
+      "hash": "0a394bdd1014d1e230fce7053e6d65a19c90ec64"
+    },
+    {
+      "path": "app/img/flags/TUR/TUR_640x480.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/TUR/TUR_640x480.jpg",
+      "size": 924050,
+      "hash": "da4288ff3acc9d4df581bbebe11bbff2f8b930fe"
+    },
+    {
+      "path": "app/img/flags/TUR/TUR_640x800.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/TUR/TUR_640x800.jpg",
+      "size": 1456958,
+      "hash": "d22eb63fbe854a2e51fb58a1da2ba74bffdcea26"
+    },
+    {
+      "path": "app/img/flags/TUR/TUR_tiny.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/TUR/TUR_tiny.png",
+      "size": 299,
+      "hash": "d13caaa9085d6e1fa63dda506d9bbbc153457091"
+    },
+    {
+      "path": "app/img/flags/USA/USA_16x48.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/USA/USA_16x48.png",
+      "size": 1711,
+      "hash": "1021873d82687e1a5998be7b5510ffd8a783c94b"
+    },
+    {
+      "path": "app/img/flags/USA/USA_320x350.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/USA/USA_320x350.jpg",
+      "size": 421811,
+      "hash": "31bd1bf9e1862d961c47499c3c22a34b1e0b9477"
+    },
+    {
+      "path": "app/img/flags/USA/USA_640x480.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/USA/USA_640x480.jpg",
+      "size": 924050,
+      "hash": "da4288ff3acc9d4df581bbebe11bbff2f8b930fe"
+    },
+    {
+      "path": "app/img/flags/USA/USA_640x800.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/USA/USA_640x800.jpg",
+      "size": 1456958,
+      "hash": "d22eb63fbe854a2e51fb58a1da2ba74bffdcea26"
+    },
+    {
+      "path": "app/img/flags/USA/USA_tiny.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/flags/USA/USA_tiny.png",
+      "size": 403,
+      "hash": "96204ce030a8f034964cbe65ced003f92603d0c0"
+    },
+    {
+      "path": "app/img/recipes/320x350/fall-amatriciana.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/320x350/fall-amatriciana.jpg",
+      "size": 15344,
+      "hash": "4adde0b571da94377d5abe04a5aec9310f76003b"
+    },
+    {
+      "path": "app/img/recipes/320x350/fall-chocolate-chai-cupcake.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/320x350/fall-chocolate-chai-cupcake.jpg",
+      "size": 8444,
+      "hash": "7bbdeef2418c54d4c204220eff15bfe36fff097d"
+    },
+    {
+      "path": "app/img/recipes/320x350/fall-mexican-rice.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/320x350/fall-mexican-rice.jpg",
+      "size": 28064,
+      "hash": "77bfb85e8cff9e181e89bf244a20789a6df2a531"
+    },
+    {
+      "path": "app/img/recipes/320x350/fall-orecchiette-sausage-ragu.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/320x350/fall-orecchiette-sausage-ragu.jpg",
+      "size": 14799,
+      "hash": "a606a47489b76e9dc0522ea6ed4adc7da30585f4"
+    },
+    {
+      "path": "app/img/recipes/320x350/fall-peanut-butter-cookie.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/320x350/fall-peanut-butter-cookie.jpg",
+      "size": 12126,
+      "hash": "26d1e392871fbaaadf379cdc7cb1741ab97e4369"
+    },
+    {
+      "path": "app/img/recipes/320x350/fall-roasted-butternut-squash-lasagna.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/320x350/fall-roasted-butternut-squash-lasagna.jpg",
+      "size": 24502,
+      "hash": "af10b849430154d3777ddd4a93e7a653e6e4c77a"
+    },
+    {
+      "path": "app/img/recipes/320x350/fall-whole-wheat-goldfish-crackers.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/320x350/fall-whole-wheat-goldfish-crackers.jpg",
+      "size": 17024,
+      "hash": "18e1fd04f5711ffb79aa5fa452bdc2ae7529d92c"
+    },
+    {
+      "path": "app/img/recipes/320x350/spring-animal-cracker-cookies.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/320x350/spring-animal-cracker-cookies.jpg",
+      "size": 14406,
+      "hash": "954f72899ff939aee9409b70affdd2b98103bb4e"
+    },
+    {
+      "path": "app/img/recipes/320x350/spring-chicken-in-mole.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/320x350/spring-chicken-in-mole.jpg",
+      "size": 22695,
+      "hash": "fa2c15f7390ee84819d589931aa03e23d5e13f5c"
+    },
+    {
+      "path": "app/img/recipes/320x350/spring-easiest-spaghetti-and-meatballs.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/320x350/spring-easiest-spaghetti-and-meatballs.jpg",
+      "size": 16893,
+      "hash": "5777d67a38ff98eae5d7f3dbc02c88b7752c4add"
+    },
+    {
+      "path": "app/img/recipes/320x350/spring-fromage-fort.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/320x350/spring-fromage-fort.jpg",
+      "size": 13909,
+      "hash": "e12336c536a8cd53eceddefe5878631731ef0ebb"
+    },
+    {
+      "path": "app/img/recipes/320x350/spring-lahmacun-turkish-pizza.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/320x350/spring-lahmacun-turkish-pizza.jpg",
+      "size": 14957,
+      "hash": "47fd177f894ebef3c74f132340a6d392e0648a44"
+    },
+    {
+      "path": "app/img/recipes/320x350/spring-meatloaf.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/320x350/spring-meatloaf.jpg",
+      "size": 17794,
+      "hash": "93812fa9df789ffdb5bf1668085db71fa1a3a612"
+    },
+    {
+      "path": "app/img/recipes/320x350/spring-ragu-bolognese.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/320x350/spring-ragu-bolognese.jpg",
+      "size": 23878,
+      "hash": "d447daa782f91f1ac8e606f7fb05d0c6c0d66390"
+    },
+    {
+      "path": "app/img/recipes/320x350/spring-spanish-asparagus-revuelto.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/320x350/spring-spanish-asparagus-revuelto.jpg",
+      "size": 27021,
+      "hash": "82ec67d86c0b4a666a75e2a41af988155d11e718"
+    },
+    {
+      "path": "app/img/recipes/320x350/summer-apricots-honey-panna-cotta.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/320x350/summer-apricots-honey-panna-cotta.jpg",
+      "size": 10046,
+      "hash": "ad14a8b02d6a97e443fca2804b6faba56977b906"
+    },
+    {
+      "path": "app/img/recipes/320x350/summer-bavarian-pretzel.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/320x350/summer-bavarian-pretzel.jpg",
+      "size": 23077,
+      "hash": "e4bdf5dad03d19f8c5d7bd241c656505acfb7a1c"
+    },
+    {
+      "path": "app/img/recipes/320x350/summer-elderberry-syrup.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/320x350/summer-elderberry-syrup.jpg",
+      "size": 15023,
+      "hash": "664e18d1c20887a3b4d3a06be2568669f35897d3"
+    },
+    {
+      "path": "app/img/recipes/320x350/summer-grits-icecream.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/320x350/summer-grits-icecream.jpg",
+      "size": 12016,
+      "hash": "4a43ffaf78bee9f9c46a48b1de34792387639638"
+    },
+    {
+      "path": "app/img/recipes/320x350/summer-hamburger.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/320x350/summer-hamburger.jpg",
+      "size": 12582,
+      "hash": "77d3f8d24977132516429d5bd213a8a0ad2d920c"
+    },
+    {
+      "path": "app/img/recipes/320x350/summer-homemade-pasta-dough.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/320x350/summer-homemade-pasta-dough.jpg",
+      "size": 10954,
+      "hash": "acd43d30c0eadf810ab1cf8b2d49b9f3051abc90"
+    },
+    {
+      "path": "app/img/recipes/320x350/summer-shaking-beef.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/320x350/summer-shaking-beef.jpg",
+      "size": 16241,
+      "hash": "cf24c660871a5d3079ff2d584c4a0b8a58c0ae90"
+    },
+    {
+      "path": "app/img/recipes/320x350/summer-spaghetti-lemon-olive.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/320x350/summer-spaghetti-lemon-olive.jpg",
+      "size": 23066,
+      "hash": "7bc04798cad94cf0b262922184a6cb48b05ca434"
+    },
+    {
+      "path": "app/img/recipes/320x350/winter-braised-duck.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/320x350/winter-braised-duck.jpg",
+      "size": 26338,
+      "hash": "782e9491a48b2652e851a57ec58ea4a3956036d0"
+    },
+    {
+      "path": "app/img/recipes/320x350/winter-braised-eggs-with-beef.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/320x350/winter-braised-eggs-with-beef.jpg",
+      "size": 33001,
+      "hash": "30dc1159e253a2a341e843538d6bbe72ce1bd09a"
+    },
+    {
+      "path": "app/img/recipes/320x350/winter-cashew-gateau.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/320x350/winter-cashew-gateau.jpg",
+      "size": 30172,
+      "hash": "1eafe01dbd07761b443346af281fdfbde5860fa3"
+    },
+    {
+      "path": "app/img/recipes/320x350/winter-chocolate-tart.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/320x350/winter-chocolate-tart.jpg",
+      "size": 29138,
+      "hash": "641136714aa71122049557eb6c0d0a4fffaf2d2c"
+    },
+    {
+      "path": "app/img/recipes/320x350/winter-world-peace-cookie.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/320x350/winter-world-peace-cookie.jpg",
+      "size": 16896,
+      "hash": "c18e9be8ae0dc3c79ef4fc9b4ae29137d5cf754c"
+    },
+    {
+      "path": "app/img/recipes/640x480/fall-amatriciana.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x480/fall-amatriciana.jpg",
+      "size": 38176,
+      "hash": "25ed6ca2bd2108baa28039d01ca30f6c8ed46386"
+    },
+    {
+      "path": "app/img/recipes/640x480/fall-chocolate-chai-cupcake.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x480/fall-chocolate-chai-cupcake.jpg",
+      "size": 17491,
+      "hash": "5ce6eb5320b91bf9420adb50fad6a1097c43d717"
+    },
+    {
+      "path": "app/img/recipes/640x480/fall-mexican-rice.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x480/fall-mexican-rice.jpg",
+      "size": 66584,
+      "hash": "ea7b44adefbde39a0f1b661e51b359a1c84ce04a"
+    },
+    {
+      "path": "app/img/recipes/640x480/fall-orecchiette-sausage-ragu.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x480/fall-orecchiette-sausage-ragu.jpg",
+      "size": 33984,
+      "hash": "a3157d47b6c1d901eb0610cd6ce2211636784e28"
+    },
+    {
+      "path": "app/img/recipes/640x480/fall-peanut-butter-cookie.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x480/fall-peanut-butter-cookie.jpg",
+      "size": 27904,
+      "hash": "141279e9ae8169e268013d2f67b181b22537028a"
+    },
+    {
+      "path": "app/img/recipes/640x480/fall-roasted-butternut-squash-lasagna.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x480/fall-roasted-butternut-squash-lasagna.jpg",
+      "size": 57646,
+      "hash": "e4bf3dcea97b30a263155ec4c500535238095b3b"
+    },
+    {
+      "path": "app/img/recipes/640x480/fall-whole-wheat-goldfish-crackers.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x480/fall-whole-wheat-goldfish-crackers.jpg",
+      "size": 40957,
+      "hash": "a1958d2202fd3883c3b7014535c2fbd137285124"
+    },
+    {
+      "path": "app/img/recipes/640x480/spring-animal-cracker-cookies.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x480/spring-animal-cracker-cookies.jpg",
+      "size": 30878,
+      "hash": "a66d10389b0bc7b867b1f4bec65610bdf02f8e32"
+    },
+    {
+      "path": "app/img/recipes/640x480/spring-chicken-in-mole.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x480/spring-chicken-in-mole.jpg",
+      "size": 46730,
+      "hash": "f86ae204760934820daca1332e08988a99c3adf7"
+    },
+    {
+      "path": "app/img/recipes/640x480/spring-easiest-spaghetti-and-meatballs.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x480/spring-easiest-spaghetti-and-meatballs.jpg",
+      "size": 41901,
+      "hash": "5490696646c4aba5a544dd50d040e6be3839d6bd"
+    },
+    {
+      "path": "app/img/recipes/640x480/spring-fromage-fort.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x480/spring-fromage-fort.jpg",
+      "size": 32220,
+      "hash": "c964c4a5dfab91bfab39c30a214da24bbfadb571"
+    },
+    {
+      "path": "app/img/recipes/640x480/spring-lahmacun-turkish-pizza.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x480/spring-lahmacun-turkish-pizza.jpg",
+      "size": 36076,
+      "hash": "a81cd7f2c5d793e237e3d10b44ddf1fb96d74dcd"
+    },
+    {
+      "path": "app/img/recipes/640x480/spring-meatloaf.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x480/spring-meatloaf.jpg",
+      "size": 44363,
+      "hash": "872a634460296f676ad7475b451f8f3ec414c96a"
+    },
+    {
+      "path": "app/img/recipes/640x480/spring-ragu-bolognese.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x480/spring-ragu-bolognese.jpg",
+      "size": 56066,
+      "hash": "7a4a032dcc19f3d6aac8579294eef84bc2c613c7"
+    },
+    {
+      "path": "app/img/recipes/640x480/spring-spanish-asparagus-revuelto.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x480/spring-spanish-asparagus-revuelto.jpg",
+      "size": 64593,
+      "hash": "8e4abe44c4cb1c4ec2b9089de8f35ea63c0c35ce"
+    },
+    {
+      "path": "app/img/recipes/640x480/summer-apricots-honey-panna-cotta.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x480/summer-apricots-honey-panna-cotta.jpg",
+      "size": 21482,
+      "hash": "2c9771a65f096eaecf6385098d667b97220e800f"
+    },
+    {
+      "path": "app/img/recipes/640x480/summer-bavarian-pretzel.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x480/summer-bavarian-pretzel.jpg",
+      "size": 55327,
+      "hash": "baf7f37d12f1b3b72b58b247eaba7928cf0cf6ca"
+    },
+    {
+      "path": "app/img/recipes/640x480/summer-elderberry-syrup.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x480/summer-elderberry-syrup.jpg",
+      "size": 40049,
+      "hash": "8ef9922a2a60ad487e9ac553fda6798699cf6eb1"
+    },
+    {
+      "path": "app/img/recipes/640x480/summer-grits-icecream.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x480/summer-grits-icecream.jpg",
+      "size": 28348,
+      "hash": "5113e90a70e784b811c2eedb4a8a62685142ee0f"
+    },
+    {
+      "path": "app/img/recipes/640x480/summer-hamburger.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x480/summer-hamburger.jpg",
+      "size": 29536,
+      "hash": "3bd28762fffc883e87dcca7af44df255a705b9ee"
+    },
+    {
+      "path": "app/img/recipes/640x480/summer-homemade-pasta-dough.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x480/summer-homemade-pasta-dough.jpg",
+      "size": 28180,
+      "hash": "51d556ad72c15d3b4c82b35fb26436d41919e17b"
+    },
+    {
+      "path": "app/img/recipes/640x480/summer-shaking-beef.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x480/summer-shaking-beef.jpg",
+      "size": 35925,
+      "hash": "4b2dcb8a62d68b56950f8f28bcf662b1d36e8979"
+    },
+    {
+      "path": "app/img/recipes/640x480/summer-spaghetti-lemon-olive.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x480/summer-spaghetti-lemon-olive.jpg",
+      "size": 55648,
+      "hash": "95eda64c0d3235b1377b24c9ef3f5da2eab8fe32"
+    },
+    {
+      "path": "app/img/recipes/640x480/winter-braised-duck.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x480/winter-braised-duck.jpg",
+      "size": 60315,
+      "hash": "2e5c1ca8c289641459959d66035d6fd2843f3199"
+    },
+    {
+      "path": "app/img/recipes/640x480/winter-braised-eggs-with-beef.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x480/winter-braised-eggs-with-beef.jpg",
+      "size": 79318,
+      "hash": "9b1b0daf2c9af7c123753f0fafadca42409447e3"
+    },
+    {
+      "path": "app/img/recipes/640x480/winter-cashew-gateau.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x480/winter-cashew-gateau.jpg",
+      "size": 66315,
+      "hash": "e4310ac7866c638af7aa000d5ace1b6eb60fb13c"
+    },
+    {
+      "path": "app/img/recipes/640x480/winter-chocolate-tart.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x480/winter-chocolate-tart.jpg",
+      "size": 59512,
+      "hash": "2151e342675f934769be25b27078f1ce8d69bcf6"
+    },
+    {
+      "path": "app/img/recipes/640x480/winter-world-peace-cookie.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x480/winter-world-peace-cookie.jpg",
+      "size": 58034,
+      "hash": "ebadbfcf7c11bf371a1b6b5a760eeac9a3c20250"
+    },
+    {
+      "path": "app/img/recipes/640x800/fall-amatriciana.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x800/fall-amatriciana.jpg",
+      "size": 83210,
+      "hash": "f9a92c98dcf76ceece8469c06e8a84da0c012450"
+    },
+    {
+      "path": "app/img/recipes/640x800/fall-chocolate-chai-cupcake.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x800/fall-chocolate-chai-cupcake.jpg",
+      "size": 55842,
+      "hash": "e19794e4a20661cc44c5e99f8e41593f298a4497"
+    },
+    {
+      "path": "app/img/recipes/640x800/fall-mexican-rice.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x800/fall-mexican-rice.jpg",
+      "size": 178732,
+      "hash": "c21fac06f811374733247798d64970c5fd632bc6"
+    },
+    {
+      "path": "app/img/recipes/640x800/fall-orecchiette-sausage-ragu.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x800/fall-orecchiette-sausage-ragu.jpg",
+      "size": 82406,
+      "hash": "ca5d7a5dad46c0f9abed8133354ada79e696a7f7"
+    },
+    {
+      "path": "app/img/recipes/640x800/fall-peanut-butter-cookie.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x800/fall-peanut-butter-cookie.jpg",
+      "size": 60010,
+      "hash": "c57c0a61c81c4e01dba016ee6172304bbba61005"
+    },
+    {
+      "path": "app/img/recipes/640x800/fall-roasted-butternut-squash-lasagna.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x800/fall-roasted-butternut-squash-lasagna.jpg",
+      "size": 133521,
+      "hash": "a695327a0535cc023510ea631f3acfd17b2d4e05"
+    },
+    {
+      "path": "app/img/recipes/640x800/fall-whole-wheat-goldfish-crackers.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x800/fall-whole-wheat-goldfish-crackers.jpg",
+      "size": 97698,
+      "hash": "dea8b2840bd73201cd6e2cba811b254c6bd677ba"
+    },
+    {
+      "path": "app/img/recipes/640x800/spring-animal-cracker-cookies.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x800/spring-animal-cracker-cookies.jpg",
+      "size": 74091,
+      "hash": "18ac5f35fe93cf16d0bbbc3294c9b1bef032f49d"
+    },
+    {
+      "path": "app/img/recipes/640x800/spring-chicken-in-mole.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x800/spring-chicken-in-mole.jpg",
+      "size": 114197,
+      "hash": "f7d2048363c75e43b557551ace10f1917c40a6fe"
+    },
+    {
+      "path": "app/img/recipes/640x800/spring-easiest-spaghetti-and-meatballs.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x800/spring-easiest-spaghetti-and-meatballs.jpg",
+      "size": 94515,
+      "hash": "c2b0f46b1c99bbca70991f2f627ed951666075f9"
+    },
+    {
+      "path": "app/img/recipes/640x800/spring-fromage-fort.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x800/spring-fromage-fort.jpg",
+      "size": 76719,
+      "hash": "9191e69e6d150847b1c4469a5382517e1ce8e74b"
+    },
+    {
+      "path": "app/img/recipes/640x800/spring-lahmacun-turkish-pizza.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x800/spring-lahmacun-turkish-pizza.jpg",
+      "size": 72083,
+      "hash": "521ef26065ad7e719560c04a2a4b00d8c8893fc7"
+    },
+    {
+      "path": "app/img/recipes/640x800/spring-meatloaf.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x800/spring-meatloaf.jpg",
+      "size": 100700,
+      "hash": "00cc1d9b9c21201e6bf06239ae8133ee0b7d5a16"
+    },
+    {
+      "path": "app/img/recipes/640x800/spring-ragu-bolognese.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x800/spring-ragu-bolognese.jpg",
+      "size": 130224,
+      "hash": "07a56c601276e36f29a2630cd6d17e04f788e844"
+    },
+    {
+      "path": "app/img/recipes/640x800/spring-spanish-asparagus-revuelto.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x800/spring-spanish-asparagus-revuelto.jpg",
+      "size": 132124,
+      "hash": "c2dc876861ad02b47635a75fe76431a67bb50585"
+    },
+    {
+      "path": "app/img/recipes/640x800/summer-apricots-honey-panna-cotta.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x800/summer-apricots-honey-panna-cotta.jpg",
+      "size": 53857,
+      "hash": "f257a9b9b0892291c99979038c252be0e27753af"
+    },
+    {
+      "path": "app/img/recipes/640x800/summer-bavarian-pretzel.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x800/summer-bavarian-pretzel.jpg",
+      "size": 113625,
+      "hash": "fc46d5294612d1ab13f4199ac5220bbe17cae062"
+    },
+    {
+      "path": "app/img/recipes/640x800/summer-elderberry-syrup.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x800/summer-elderberry-syrup.jpg",
+      "size": 79619,
+      "hash": "5a8da68537b9bbc676ed4b678617c3862d5d9c15"
+    },
+    {
+      "path": "app/img/recipes/640x800/summer-grits-icecream.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x800/summer-grits-icecream.jpg",
+      "size": 72063,
+      "hash": "d18218ed5c5fec0feabe176c08fa61f6df707eb9"
+    },
+    {
+      "path": "app/img/recipes/640x800/summer-hamburger.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x800/summer-hamburger.jpg",
+      "size": 65812,
+      "hash": "24070c7a3343935e088052bbb8e90f68ee68e3b2"
+    },
+    {
+      "path": "app/img/recipes/640x800/summer-homemade-pasta-dough.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x800/summer-homemade-pasta-dough.jpg",
+      "size": 60417,
+      "hash": "d82025db0f277d196e5f55a3157015c98c7c3731"
+    },
+    {
+      "path": "app/img/recipes/640x800/summer-shaking-beef.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x800/summer-shaking-beef.jpg",
+      "size": 82208,
+      "hash": "273ae171f4da06b9f68adf65da0b495c6f335d5a"
+    },
+    {
+      "path": "app/img/recipes/640x800/summer-spaghetti-lemon-olive.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x800/summer-spaghetti-lemon-olive.jpg",
+      "size": 136970,
+      "hash": "c19ba4819d9228ab697df25dd0c99fa4affda21c"
+    },
+    {
+      "path": "app/img/recipes/640x800/winter-braised-duck.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x800/winter-braised-duck.jpg",
+      "size": 136393,
+      "hash": "5be3d1d5ad0c2b38d5d865419fce1936628fa100"
+    },
+    {
+      "path": "app/img/recipes/640x800/winter-braised-eggs-with-beef.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x800/winter-braised-eggs-with-beef.jpg",
+      "size": 187989,
+      "hash": "ee5f0a600ff5ef869ca49f936756d7499b470072"
+    },
+    {
+      "path": "app/img/recipes/640x800/winter-cashew-gateau.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x800/winter-cashew-gateau.jpg",
+      "size": 149936,
+      "hash": "54edbc313d9bca20defd4beaa493a6fc63f26bb6"
+    },
+    {
+      "path": "app/img/recipes/640x800/winter-chocolate-tart.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x800/winter-chocolate-tart.jpg",
+      "size": 161486,
+      "hash": "2d2339b613163423bcb36d90d0e69e14854391fd"
+    },
+    {
+      "path": "app/img/recipes/640x800/winter-world-peace-cookie.jpg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/recipes/640x800/winter-world-peace-cookie.jpg",
+      "size": 96651,
+      "hash": "5beb67a2b9c05c48b50b4d59923cc5f4c640b7e1"
+    },
+    {
+      "path": "head.html",
+      "where": "internal",
+      "type": "head",
+      "hash": "78d2a5f3cce46f188c1fa1cc57f5e6df6aa95859"
+    }
+  ],
+  "cordovaCompatibilityVersions": {
+    "android": "acaca823167166b7fe2a51c7a275365aa5361ea6",
+    "ios": "5bb16ad1e2ccc02b43703bfa66306760d189bb90"
+  }
+}

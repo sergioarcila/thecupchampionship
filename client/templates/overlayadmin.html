@@ -1,0 +1,66 @@
+<template name="overlayadmin">
+    <div class="overlay share">
+
+        <a href="#" class="js-close-overlay overlay-dismiss"><span class="icon-cross"></span></a>
+            
+        <div class="wrapper-heading">
+            {{#if iscurrentUser}}
+                <div class="btn-twitter">
+                {{#if current.services.twitter.screenName}}
+                    <span class='icon-twitter'></span>{{current.services.twitter.screenName}}
+                {{else}}
+                    <span class='icon-email'></span>{{current.emails.[0].address}}
+                {{/if}}    
+                </div>
+            <a class="logout btn-twitter"><div class="btn-twitter">LOGOUT</div></a>
+            
+            <br><br>
+             
+            <!--<table class="userprefs">
+                <tr><td>Notifications</td><td></td></tr>
+                <tr><td>Your Tee Time</td><td><input type="checkbox" class="js-switch" id="teetime" {{userwants 'teetime'}} /></td></tr>
+                <tr><td>Scoring Updates</td><td><input type="checkbox" class="js-switch" id="scoring" {{userwants 'scoring'}} /></td></tr>
+                {{#if userwants 'scoring'}}
+                <tr><td>Cup Over</td><td><input type="checkbox" class="js-switch" id="cupover" {{userwants 'cupover'}} /></td></tr>
+                <tr><td>Final Match</td><td><input type="checkbox" class="js-switch" id="finalmatch" {{userwants 'finalmatch'}} /></td></tr>
+                
+                <tr><td>Back Nine Saturday</td><td><input type="checkbox" class="js-switch" id="back9" {{userwants 'back9'}} /></td></tr>
+                
+                <tr><td>Upset Alert</td><td><input type="checkbox" class="js-switch" id="upset" {{userwants 'upset'}} /></td></tr>
+                {{/if}}
+            </table>-->
+            
+            {{else}}
+            
+                <br>
+                <!--<a class="js-signin btn-twitter">Login with Twitter</a>-->
+            <form>
+                <button type="submit" class="btn-twitter">
+                {{#if loggingin}}
+                    <span class="icon-sync"></span>Logging in...
+                    {{else}}
+                    <span class='icon-email'></span>Login with Email
+                {{/if}}
+                </button>
+                <textarea type="email" name="emailAddress" rows="1" placeholder="Type your email address here"></textarea>
+                <textarea type="password" name="password" rows="1" placeholder="Password"></textarea>
+            </form>
+            
+            {{/if}}
+            
+        </div>
+         
+        
+        <br>
+        
+        
+        <div class="wrapper-camera" style="margin-bottom:0em; position:absolute">
+            <span class="icon-cup"></span>
+            <a class = "js-close-admin">ADMIN</a>
+            <div class="subtext-camera">The Cup, 2018<br></div>
+        </div> 
+        
+        
+             
+    </div>
+</template>

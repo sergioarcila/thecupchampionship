@@ -1,0 +1,46 @@
+<template name="activity2">    
+  <a class="item-activity js-match" style="border-left: 10px solid {{getleadteam matchID "color"}};">
+    <!--<a href="" class="item-activity  js-match" style="border-left: 10px solid {{getleadteam matchID "color"}};">-->
+    <span class="attribution">
+      <span class="meta">
+        <span class="author">
+            {{#each getlastteam T1.[0]}}
+            <i class="flag flag-16 flag-{{this.code}}"></i>
+            {{else}}
+            <span style="color:black">ROOK</span> 
+            {{/each}}
+            {{T1.[0]}} {{#if isteammatch matchID}}&amp; {{T1.[1]}}{{/if}} {{#if mediacount matchID}}<span class="icon-camera"></span>{{/if}}
+            <span class="recipe">{{#if matchover matchID}} 
+                                   {{#each totalscore matchID}} 
+                                    {{#if @index}}({{this}}){{else}} {{this}}{{/if}}
+                                   {{/each}} 
+                                 {{else}}
+                                   {{#if hasmatchstarted matchID}}
+                                        {{#if status}}
+                                           {{getNumber status}}
+                                        {{else}}
+                                           EVEN
+                                        {{/if}}
+                                   {{#if handicap}}
+                                        {{#if netstatus}}
+                                        ({{getNumber netstatus}})
+                                        {{else}}
+                                        (EVEN)
+                                        {{/if}}
+                                   {{/if}}
+                                   {{/if}}
+                                 {{/if}}</span>
+        </span>
+        <br><span style="float:left">USGA: {{#if compare index 0}}{{index}},
+                                           {{else}} 
+                                           +{{multiply index -1}},
+                                           {{/if}} Cup Draft: {{formatdecimal getmember.stats.draftperc 1}} %, 
+                                           Qualifying: {{#if previous.net}} {{getNumber previous.net}} {{else}}E{{/if}} ({{previous.scores}})</span>
+        <span style="float:right">{{#if matchover matchID}}F{{else}}{{#if hasmatchstarted matchID}}thru {{hole}}{{else}}{{formatdate time 'hh:mm A'}}{{/if}}{{/if}}    </span>
+      </span>
+    </span>
+
+    <!--<div class="bg-image" style="background-image: url('{{image}}');"></div>-->
+
+  </a>
+</template>

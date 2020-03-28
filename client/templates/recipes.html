@@ -1,0 +1,102 @@
+<template name="recipes">
+{{#if Template.subscriptionsReady}}    
+  <div class="page recipes" >
+      
+    {{>nav title='Recipes' black=true back=false}}  
+    <div class="content-scrollable">
+    
+      <div class="querywrapper">
+        <!--<form class="form-share">
+          <div class="wrapper-checkbox">
+            <label for="CBshamble" class="checkbox">
+              <input type="checkbox" name="CBshamble" id="CBshamble" checked>
+              <span>Shamble</span>
+            </label>
+          </div>
+          <div class="wrapper-checkbox">
+            <label for="CBbestball" class="checkbox">
+              <input type="checkbox" name="CBbestball" id="CBbestball2" checked>
+              <span>Best Ball</span>
+            </label>
+          </div>    
+          <div class="wrapper-checkbox">
+            <label for="CBsingles" class="checkbox">
+              <input type="checkbox" name="CBsingles" id="CBsingles" checked>
+              <span>Singles</span>
+            </label>
+          </div>
+        </form>-->
+          <table>
+            <tr>
+                <td colspan=5></td>
+            </tr>   
+            <tr>
+                <td colspan=5></td>
+            </tr>   
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Singles</td>
+                <td><input type="checkbox" class="js-switch1" id="CBsingles" checked /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Bestball</td>
+                <td><input type="checkbox" class="js-switch2" id="CBbestball" checked /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Shamble</td>
+                <td><input type="checkbox" class="js-switch3" id="CBshamble" checked /></td>
+            </tr>
+            <tr>
+                <td colspan=5><div id="slider"></div></td>
+            </tr>  
+            <tr>
+                <td>{{slider.[0]}}</td>
+                <td colspan=3></td>
+                <td>{{slider.[1]}}</td>
+            </tr> 
+            <tr>
+                <td colspan=5>
+                    {{#if ischoice 'tenure'}}Tenure: The number of active Cup years{{/if}}
+                    {{#if ischoice 'cupresult'}}Cups: Number of Cup team wins{{/if}}
+                    {{#if ischoice 'draftperc'}}DFT%: Average draft percentage{{/if}}
+                    {{#if ischoice 'winperc'}}W%: Percentage of available points won{{/if}}
+                    {{#if ischoice 'power'}}POWER: Draft percentage + match performance{{/if}}
+                    {{#if ischoice 'impact'}}IMPACT: Power - Draft Percentage{{/if}}
+                    {{#if ischoice 'points'}}POINTS: Total points in selected matches{{/if}}
+                </td>
+            </tr>  
+          </table>
+          
+      </div>    
+        
+        
+      <div class="list-recipes">
+          {{#each getmembers}}
+          {{#if isheaderline @index}}
+            {{> recipeItem }}
+          {{else}}
+            {{> recipeItem head='true'}}
+            {{> recipeItem }}
+          {{/if}}
+        {{/each}}
+          {{#if isGlobalAdmin}}
+            Name: <input type="text" id="name"><br>
+            Twitter: <input type="text" id="twitter"><br>
+          <div class="btn-primary" id="newplayer">ADD MEMBER</div>
+          {{/if}}
+      </div>
+        {{> linktab}}
+    </div>      
+  </div>
+    {{else}}
+    {{> loader}}
+    {{/if}}
+</template>

@@ -1,0 +1,57 @@
+<template name="linktab">      
+    <!--<div class="btn-primary">
+        <a href="/"><span class="tab1">LIVE SCORING</span></a>
+        <a href="feed"><span class="tab2">DRAFT</span></a>
+        <a href="bookmarks"><span class="tab3">MEMBERS</span></a>
+        <a href="about"><span class="tab4">PICK 'EM</span></a>
+    </div>-->
+    <div class="btn-primary changeevent">
+        <!--<span class="changelink">change</span>-->
+        <a href="/"><center>{{getcurrentevent.formal}}</center></a>
+    </div>
+    <a class="js-signin btn-twitter">
+        
+        {{#if iscurrentUser}}
+        {{#if current.services.twitter.screenName}}
+        <span class='icon-twitter'></span>{{current.services.twitter.screenName}}
+        {{else}}
+        <span class='icon-email'></span>{{current.emails.[0].address}}
+        {{/if}}
+        {{else}}
+        LOGIN or SIGN UP
+        {{/if}}
+    </a>
+    <!--<div class="btn-primary" id="cupbroadcast">
+        <a href="/"><center>{{cupinfo.year}} ANALYSIS</center></a>
+    </div>-->
+    <div class="btn-primary" id="analysis">
+        <a href="/analysis"><center>{{cupinfo.year}} ANALYSIS (BETA)</center></a>
+    </div>
+    
+    <div class="btn-primary" id ="cupbroadcast2">
+        {{#with getbroadcastlink}}
+            <a href={{urlYouTube}}><center>{{cupinfo.year}} CUP BROADCAST</center></a>
+        {{else}}
+            <a><center>UPLOAD BROADCAST VIDEOS!</center></a>
+        {{/with}}
+    </div>
+    {{#if isAdmin}}
+    <div class="btn-primary" id="cupbroadcast">
+            <a href='broadcastpreview'><center>BROADCAST ADMIN</center></a>
+    </div>
+    {{/if}}
+    
+    <div class="btn-twitter">
+            <center>
+                {{#with getcurrentevent}}
+                {{#each this.social}}
+                <a href="{{url}}" target="_blank" class="social">
+                    <span class='icon-{{type}} big'></span>&nbsp;&nbsp;
+                </a>
+                {{else}}
+                    No social media, yet...
+                {{/each}}
+                {{/with}}
+            </center>
+    </div>
+</template>

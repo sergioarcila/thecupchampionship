@@ -1,0 +1,90 @@
+<template name="admin">
+    {{>nav title="Home" black=false back=false}}
+    {{#if Template.subscriptionsReady}}
+  <div id="admin">
+    
+       <div class="content-scrollable">
+    <div class="wrapper-admin">
+       
+      {{#if isAdmin}}
+        <h1 class="title-admin">Admin</h1>
+        
+          <br>
+          <div class="btn-primary pts0 ptsUP">+</div> 
+          <div class="btn-primary pts {{isptschange 0}}" id=0>F9: {{getmatch.ptsavail.values.[0]}}</div> 
+          <div class="btn-primary pts {{isptschange 1}}" id=1>B9: {{getmatch.ptsavail.values.[1]}}</div> 
+          <div class="btn-primary pts {{isptschange 2}}" id=2>F18: {{getmatch.ptsavail.values.[2]}}</div> 
+          <div class="btn-primary pts0 ptsDN">-</div> 
+        
+        
+        <center>
+        <br><br><br><br>
+        <div class="btn-primary updateplayer">update player</div>    
+        <div class="btn-primary updatematchpower">update matchpower</div>    
+        <div class="btn-primary updateteamstats">update teamstat</div>
+        <div class="btn-primary updatecup">update cup</div>    
+        <div class="btn-primary updateevent">update event</div>        
+        <div class="btn-primary matchpredict">matchpredict</div>
+        <div class="btn-primary resetcupmatches">resetcupmatches</div>    
+        <div class="btn-primary customscript">customscript</div>     
+        <div class="btn-primary simulatecup">simulatecup</div>    
+        <div class="btn-primary simulateExhibition">simulateExhibition</div>        
+        <div class="btn-primary simulatematch">simulatematch</div>      
+        <div class="btn-primary resetcup">resetcup</div>  
+        <div class="btn-primary resetexhibition">resetexhibition</div>  
+        <div class="btn-primary resetexpectedtimes">resetexpectedtimes</div>      
+        <div class="btn-primary testnotification">notification</div>  
+        <div class="btn-primary addcupmatches">addcupmatches</div>
+        <div class="btn-primary cuprecordupdate">updatecuprecords</div>  
+        <div class="btn-primary setactivemembers">setactivemembers</div> 
+        <div class="btn-primary addplayers">addplayers</div>
+        <div class="btn-primary getpartnerstat">getpartnerstat</div>   
+        <div class="btn-primary getpartnerstat2">getpartnerstat2</div>
+        <div class="btn-primary createranking">createranking</div> 
+        <div class="btn-primary matchbreakdown">matchbreakdown</div>     
+        <div class="btn-primary getholeperformance">getholeperformance</div>
+        <div class="btn-primary trainmatches">trainmatches</div>    
+        <div class="btn-primary scrapehistory">scrapehistory</div>  
+        <div class="btn-primary testEXIF">testEXIF</div>
+        <div class="btn-primary updateMediaMetadata">mediaMetaData Update</div> 
+        <div class="btn-primary clearhistory">clearhistory</div> 
+        <div class="btn-primary clearmedia">clearmedia</div>     
+        <a class="btn-primary" href="/mappage">MAP</a>  
+        </center>
+     
+      <table class="userlist">
+          <tr>
+              <td>Name</td>
+              <td>Joined</td>
+              <td>LastLog</td>
+              <td>Email</td>
+              <td>Twitter</td>
+              <td>Event</td>
+          </tr>  
+          {{#each getusers}}  
+            <tr>
+                <td>{{this.profile.name}}</td>
+                <td>{{this.createdAt}}</td>
+                <td>{{this.services.resume.loginTokens.[0].when}}</td>
+                <td>{{this.emails.[0].address}}</td>
+                <td>{{this.services.twitter.screenName}}</td>
+                <td>{{this.profile.event}}</td>
+            </tr>
+          {{/each}}
+      </table>    
+        
+      {{else}}
+        <h1 class="title-admin">Forbidden</h1>
+        
+        {{#unless currentUser}}
+          <a class="login">Log in with Twitter</a>
+        {{/unless}}
+      {{/if}}
+    </div>
+           
+        </div>
+  </div>
+    {{else}}
+    {{> loader}}
+    {{/if}}
+</template>

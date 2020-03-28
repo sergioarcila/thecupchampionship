@@ -1,0 +1,30 @@
+<template name="keymatch">
+  <a href="" class="item-activity js-match">
+    <span class="attribution" style="height:5em;">
+      <span class="meta">
+        <div style="width:48px; height:16px; position:absolute; margin-left:-0.5em;"><img src="/img/flags/thecup/{{getplayerteam name}}/{{getplayerteam name}}_16x48.png"></div>
+        <span class="author" style="position:absolute; border:0px solid black; margin-left:48px; width:65%; height:100%">
+        {{matchID}}
+          
+        </span>
+          
+        <span class="recipe" style="margin-top:0em; text-align: center; padding-left:0.5em;">IMPACT<br> {{getNumber impacts.y2016}}</span>
+            <span class="recipe" style="margin-top:0em; text-align: center;">PTS<br>
+                {{gettotalpoints name}}/{{getavailpoints name}}
+            </span>
+          
+        
+        <br><span style="float:right; text-align:right; width:100%;">{{#if hasmatchstarted matchID}}{{getmatchhole matchID}}{{else}}{{getteetime matchID 'time'}}{{/if}}</span>
+        <br>{{T2pts}}   
+        <!--<span class="avatar">
+        <img src="/img/flags/{{cupinfo.T2}}/{{cupinfo.T2}}_16x48.png">
+            {{cupinfo.T2}}
+        </span>-->
+        
+       <!--{{#if place}}<span class="location">&mdash;{{place}}</span>{{/if}}-->
+      </span>
+    </span>
+  </a>
+    
+    
+</template>

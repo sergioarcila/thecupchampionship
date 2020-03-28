@@ -1,0 +1,70 @@
+<template name="activity">
+   <a href="" class="item-activity js-match" style="border-width:10px;border-left-color:{{getleadteam matchID "color"}};">
+      <span class="attribution">
+      <span class="meta">
+        {{T1pts}}
+        <!--<span class="avatar">
+            <img src="/img/flags/{{cupinfo.T1}}/{{cupinfo.T1}}_16x48.png">
+            <svg width="3em" height="1em"><rect width="3em" height="1em" fill="red" stroke='white' stroke-width='0.5'/><text x="50%" y="50%" alignment-baseline="middle" text-anchor="middle" font-size="8"></text></svg>
+        </span>-->
+        <span class="author">
+            <i class="flag flag-16 flag-{{gT1.code}}"></i>
+            {{#each T1}}
+                {{#if @index}} &amp; {{/if}} 
+                {{#unless matchesEditable}}
+                    {{this}}
+                {{else}}
+                    <select class="playerpick" id="{{../matchID}}_1_{{@index}}">
+                        <option selected>{{this}}</option>
+                        <option value=""></option>
+                        {{#each getteam 1}}
+                            <option value="{{this}}">{{this}}</option>
+                        {{/each}}
+                        {{#if ../matchID}}
+                            {{#each getteam 0}}
+                            <option value="{{this}}">{{this}}</option>
+                            {{/each}}
+                            
+                        {{/if}}
+                    </select> 
+                {{/unless}}
+            {{/each}}
+            <span class="recipe">{{getmatchstatus matchID 1}}</span>
+        </span>
+        <br><span class="matchholetext">{{#if matchesEditable}}<span class="timeCH" style="float:left" id=1>TIME+</span><span class="timeCH" style="float:left" id="-1">TIME-</span>{{else}}<span style="float:left"><span class="icon-menu"> {{#if mediacount matchID}}<span class="icon-camera"></span>{{/if}}</span></span>{{/if}}{{#if hasmatchstarted matchID}}{{getmatchhole matchID}}{{else}} {{uppercase type}} | {{formatdate time 'hh:mm A'}}{{#if starthole}}, HOLE {{starthole}} {{/if}} {{/if}}</span>
+        <br>{{T2pts}}   
+        <!--<span class="avatar">
+        <img src="/img/flags/{{cupinfo.T2}}/{{cupinfo.T2}}_16x48.png">
+            {{cupinfo.T2}}
+        </span>-->
+        <span class="author">
+            <i class="flag flag-16 flag-{{gT2.code}}"></i>
+            {{#each T2}}
+                {{#if @index}} &amp; {{/if}} 
+                {{#unless matchesEditable}}
+                    {{this}}
+                {{else}}
+                    <select class="playerpick"  id="{{../matchID}}_2_{{@index}}">
+                        <option selected>{{this}}</option>
+                        <option value=""></option>
+                        {{#each getteam 0}}
+                            <option value="{{this}}">{{this}}</option>
+                        {{/each}}
+                        
+                        {{#if ../matchID}}
+                            {{#each getteam 1}}
+                            <option value="{{this}}">{{this}}</option>
+                            {{/each}}
+                            
+                        {{/if}}
+                    </select> 
+                {{/unless}}
+            {{/each}}
+            <span class="recipe">{{getmatchstatus matchID -1}}</span> 
+        </span> 
+       <!--{{#if place}}<span class="location">&mdash;{{place}}</span>{{/if}}-->
+      </span>
+    </span>
+  </a>
+    
+</template>

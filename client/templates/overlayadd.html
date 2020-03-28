@@ -1,0 +1,31 @@
+<template name="overlayadd">
+    <div class="overlay match">
+        <a href="#" class="js-close-overlay overlay-dismiss"><span class="icon-cross"></span></a>
+        <div class="content-scrollable">
+        <div class="matchoverlay">  
+            Description: <input type="text" id="description"><br>
+            Course: <select class="" id="course">
+                    <option selected>Pick</option>
+                    {{#each getcourses}}
+                        <option value={{description}}>{{club}}, {{location}}</option>
+                    {{/each}}
+                    </select><br>
+            Format: <select class="" id="format">
+                    <option selected>Pick</option>
+                        <option value="singles">Singles: One on One</option>
+                        <option value="bestball">Match Play Best Ball: Two v. Two</option>
+                        <option value="stroke">Stroke Play: Gross or Net</option>
+                    </select><br><br>
+            Number of Matches: <select class="" id="nummatches">
+                    <option selected>Pick</option>
+                        <option value=1>One</option>
+                        <option value=2>Two</option>
+                        <option value=3>Three</option>
+                        <option value=4>Four</option>
+                    </select><br><br>
+            <div class="btn-secondary add">ADD EXHIBITION</div>
+        </div>     
+            </div>
+        
+    </div>
+</template>

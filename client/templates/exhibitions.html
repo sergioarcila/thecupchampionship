@@ -1,0 +1,114 @@
+<template name="exhibitions">
+    {{>nav title="Home"}}
+    {{#if Template.subscriptionsReady}}
+    <!--{{>nav title="Home" black=false back=true}}-->
+  <div class="page home">
+    
+    
+    <div class="content-scrollable">
+        
+      
+      <div class="bg-image home" style="height:25%;background:-webkit-linear-gradient(left, {{T1.color.[0]}},black,{{T2.color.[0]}});">
+        <h1 class="title-home">
+          <div class="banner">
+              <div class="stats">
+                   <center><select class="currentexhibition" id="currentexhibition">
+                              <option selected>WHICH ONE???</option>
+                              {{#each getexhibitions}}
+                              <option value="{{_id}}" {{isExhibitionSelected _id}}>{{description}}, 
+                                  <!--{{#with firstmatch _id}} {{getteetime matchID 'time'}} {{/with}}-->
+                                  {{getdate date}}
+                              
+                              </option>
+                              {{/each}}
+                              {{#if isAdmin}}
+                              <option value="addexhibition">Add Exhibition</option>
+                              {{/if}}
+                        </select>                  
+                  </center>
+            </div>
+          </div>
+        </h1>
+          
+      </div>
+      <h2 class="list-title intro">  
+          <div class="t1">{{T1.long}}</div><div class="t2">{{T2.long}}</div>
+          <div class="imgcontainer"><img src="img/flags/{{getcurrentevent}}/Main/MainCupLogo.png"/></div>
+      </h2>    
+    
+        {{#if exhibitioninfo}}
+      <h2 class="list-title">{{exhibitioninfo.description}}
+          <a href="#" class="nav-item js-share"><span class="icon-camera"></span></a>
+      </h2>
+      <div class="list-subtitle">{{getteetime 4 'day'}}, {{#each courseinfo exhibitioninfo.course}}{{club}}, {{name}} | {{location}}{{/each}}
+        <table>
+        <tr>    
+        <td>
+        <div class="mini-select"> 
+            {{#unless isequal exhibitioninfo.type 'stroke'}}
+            <select class="sortfield" id="sortfield">
+                <option value="time" selected>Sort: Tee Time</option>
+                <option value="impacts">Sort: Cup Impact</option>
+                <option value="powers">Sort: Level of Play</option>
+                <option value="status">Sort: Close Matches</option>
+            </select>
+            {{else}}
+            <select class="sortfield" id="sortfield">
+                <option value="netstatus" selected>Sort: Net Score</option>
+                <option value="status">Sort: Gross Score</option>
+                <option value="time">Sort: Tee Time</option>
+                <option value="previousnet">Sort: Net, Prior Best Two</option>
+            </select>
+            {{/unless}}
+        </div>
+        </td>
+        {{#if isAdmin}}    
+        <td><div class="CHminutes" id=10>+10MIN</div></td>
+        <td><div class="CHminutes" id=-10>-10MIN</div></td> 
+        <td><div class="changedayaccess" id=0>{{#if accessopen 0}}SC ON{{else}}SC OFF{{/if}}</div></td>
+        <td><div class="accessmatches">MATCHCH</div></td>   
+        {{/if}}    
+        </tr>    
+        </table>
+      </div>  
+        {{/if}}
+        
+           
+         
+        
+      <div class="list-activities">
+           <!--{{> activity2 head='true'}}-->
+        {{#each exhibitionmatch}}
+          
+          {{#if isequal type 'stroke'}}
+            {{> activity2}}
+          {{else}}
+            {{> activity}}
+          {{/if}}
+          
+          <!--<div class="wrapper-message">-->
+          <!--  <div class="title-message">No one is cooking yet!</div>-->
+          <!--  <div class="subtitle-message">Share that you made a recipe and it will show up here.</div>-->
+          <!--</div>-->
+          {{else}}
+          <br><br><center>Pick an exhibition...</center>
+        {{/each}}
+      </div>
+    
+      {{> linktab}}        
+        
+      <h2 class="list-title">Is Your Game Cup Ready?</h2>
+      <div class="list-subtitle">{{cupinfo.[0].year}}</div>
+      <div class="list-recipes">
+       <!-- {{#each featuredRecipes}}
+          {{> recipeItem recipe=this size='small'}}
+        {{/each}}-->
+      </div>
+      
+    </div>
+
+  </div>
+    {{else}}
+        {{>loader}}
+    {{/if}}
+</template>
