@@ -1,10 +1,5 @@
-Local Market
+The Cup Championship
 ============
 
-Local Market is an open source app powered by Meteor and made by [Percolate Studio](http://percolatestudio.com). In this example app we explore intermediate techniques:
-
-  - Using a sample database to generate lists and items
-  - Integrating OAUTH with Meteor's accounts-ui package
-  - Cordova integration to use device phone and GPS
-  - Mobile UI & UX
+The Cup Championship is a Meteor.js powered web app to service the scoring needs of the Cup Championship. It is adapted from the Meteor.js Local Market app. 
   
