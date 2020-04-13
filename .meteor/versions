@@ -1,8 +1,11 @@
 abpetkov:switchery@0.1.0
 accounts-base@1.2.7
+accounts-google@1.0.9
 accounts-oauth@1.1.12
 accounts-password@1.1.8
 accounts-twitter@1.0.9
+accounts-ui@1.1.9
+accounts-ui-unstyled@1.1.12
 acemtp:meta-extractor@1.0.4
 allow-deny@1.0.4
 autoupdate@1.2.9
@@ -41,6 +44,7 @@ fastclick@1.0.11
 fortawesome:fontawesome@4.7.0
 fourseven:scss@3.3.3_3
 geojson-utils@1.0.8
+google@1.1.11
 hot-code-push@1.0.4
 html-tools@1.0.9
 htmljs@1.0.9
@@ -91,6 +95,7 @@ npm-bcrypt@0.8.5
 npm-mongo@1.4.43
 oauth@1.1.10
 oauth1@1.1.9
+oauth2@1.1.9
 observe-sequence@1.0.11
 ordered-dict@1.0.7
 ostrio:templatehelpers@1.1.2
