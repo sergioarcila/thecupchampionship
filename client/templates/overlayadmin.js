@@ -129,6 +129,33 @@ Template.overlayadmin.events({
     'change #upset': function(event) {
     Meteor.users.update(Meteor.user()._id, {$set: {"profile.notifications.upset": $(event.target).is(':checked')}});
   },
+    'click #btn_google_login': function(event) {
+    event.preventDefault();
+
+    const errors = {
+      'no-hd': 'This Google account is not a G Suite account, please try another account or contact support@clozer.ai',
+      'duplicated-email': `Can't create an account because the email is already in use, please try another account or contact support@clozer.ai`,
+      default: 'An error occurred while attempting to log in, please contact support@clozer.ai or try again later'
+    };
+
+    const scope = ServiceConfiguration.configurations.findOne({service: 'google'});
+
+    console.log(scope);
+    
+    Meteor.loginWithGoogle(
+      {requestPermissions: ['email']},
+      error => {
+        if (error) {
+          if (error.errorType === 'Accounts.LoginCancelledError') return;
+          const message = errors[error.error] || errors.default;
+          alert('Login error', error);
+          console.log(error);
+        } else if (token && !isLogIn) {
+          acceptInviteMethod.call({token});
+        }
+      }
+    );
+  },
     'submit form' ( event, template ) {
     event.preventDefault();
     

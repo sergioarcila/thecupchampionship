@@ -34,6 +34,14 @@
             
                 <br>
                 <!--<a class="js-signin btn-twitter">Login with Twitter</a>-->
+                
+            <button type="submit" id="btn_google_login" class="btn-twitter">
+                {{#if loggingin}}
+                    <span class="icon-sync"></span>Logging in...
+                {{else}}
+                    <span class='icon-email'></span>Login with Gmail
+                {{/if}}
+            </button>
             <form>
                 <button type="submit" class="btn-twitter">
                 {{#if loggingin}}
