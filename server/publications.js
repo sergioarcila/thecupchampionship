@@ -106,8 +106,9 @@ Meteor.publish(null, function() {
   return Meteor.users.find(this.userId, {
     fields: {
       admin: 1,
-      'services.twitter.profile_image_url_https': 1,
-      'services.twitter.screenName':1
+      services:1
+      // 'services.twitter.profile_image_url_https': 1,
+      // 'services.twitter.screenName':1    
     }
   });
 })
